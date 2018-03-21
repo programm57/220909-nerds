@@ -26,21 +26,18 @@
 			<h1>Магазин готовых шаблонов</h1>			
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтры товаров</h2>
-				<form class="filter" method="get" action="https://echo.htmlacademy">
+				<form class="filter" method="get" action="https://echo.htmlacademy">				
 					<fieldset>
 						<legend>Стоимость</legend>
-						<p class="cost">
+						<button class="cost-button-min" type="button">Минимальная цена</button>
+						<button class="cost-button-max" type="button">Максимальная цена</button>
+						<p class="cost-field">
 							<label>
-								<input type="range" name="cost" min="0" max="20000" step="1" value="">	
-							</label>
-						</p>
-						<p class="cost-number">
-							<label>
-								От <input type="text" name="from" placeholder="0">
+								От <input type="text" name="from" value="0">
 							</label>
 							<label>
-								До <input type="text" name="from" placeholder="15000">
-							</label> <!-- сделал так, не совсем разобрался как должно быть -->
+								До <input type="text" name="until" value="15 000">
+							</label>
 						</p>
 					</fieldset>
 					<fieldset>
@@ -88,89 +85,88 @@
 					<button type="submit" class="filter-button">Показать</button>
 				</form>	
 			</section>
-			<fiedset class="sort">
-				<h2 class="visually-hidden">Сортировка шаблонов</h2>
-				<legend>Сортировать</legend>
+			<div class="sort">
+				<h2>Сортировать</h2>
 				<ul class="sort-list">
-					<li class="sort-price"><a href="#">По цене</a></li>
+					<li class="sort-price-current">По цене</li>
 					<li class="sort-type"><a href="#">По типу</a></li>
 					<li class="sort-name"><a href="#">По названию</a></li> 
-					<li class="sort-down"><a href="#">По убыванию</a></li>
+					<li class="sort-down-current">По убыванию</li>
 					<li class="sort-up"><a href="#">По возрастанию</a></li>
 				</ul>
-			</fieldset>
+			</div>
 			<section class="templates">
 				<h2 class="visually-hidden">Каталог шаблонов</h2>
 				<ul class="template-list">
 					<li class="sedona-item">
-						<h4><a href="#">Sedona</a></h4> <!-- а нужна ли здесь ссылка? -->
+						<h4><a href="#">Sedona</a></h4>
 						<p class="about">Инофрмационный сайт<br>для туристов</p>
 						<p class="image">
-							<a href="#"><img src="img/sedona-template.jpg" width="360" height="576" alt="Шаблон Седона"></a>
-						</p> <!--а может быть тут лучше присвоить класс ссылке и убрать параграф!? -->
-						<p class="button"> 
-							<a href="#">9 900 <span>руб.</span></a> <!-- и тут? -->
+							<img src="img/sedona-template.jpg" width="360" height="576" alt="Шаблон Седона">
+						</p> 
+						<p class="button-orders"> 
+							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="pink-item">
 						<h4><a href="#">Pink app</a></h4>
 						<p class="about">Продуктовый лендинг<br> приложения для iOS и Android</p>
 						<p class="image">
-							<a href="#"><img src="img/pink-template.jpg" width="360" height="576" alt="Шаблон Pink app"></a>
+							<img src="img/pink-template.jpg" width="360" height="576" alt="Шаблон Pink app">
 						</p>
-						<p class="button">
-							<a href="#">9 900 <span>руб.</span></a>
+						<p class="button-orders"> 
+							<button class="button-order2" type="submit">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="barbershop-item">
 						<h4><a href="#">Barbershop</a></h4>
 						<p class="about">Сайт салоны красоты.<br>Для мужчин, да</p>
 						<p class="image">
-							<a href="#"><img src="img/barbershop-template.jpg" width="360 height="576" alt="Шаблон Барбершопа"></a>
+							<img src="img/barbershop-template.jpg" width="360" height="576" alt="Шаблон Барбершопа">
 						</p>
-						<p class="button">
-							<a href="#">9 900 <span>руб.</span></a>
+						<p class="button-orders"> 
+							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="mishka-item">
 						<h4><a href="#">Mishka</a></h4>
 						<p class="about">Интернет-магазин<br>вязаных игрушек</p>
 						<p class="image">
-							<a href="#"><img src="img/mishka-template.jpg" width=360"" height="576" alt="Шаблон интернет-магазина вязаных игрушек"></a>
+							<img src="img/mishka-template.jpg" width="360" height="576" alt="Шаблон интернет-магазина вязаных игрушек">
 						</p>
-						<p class="button">
-							<a href="#">9 900 <span>руб.</span></a>
+						<p class="button-orders"> 
+							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
 						</p>
 					</li> 				
 					<li class="aplus-item">
 						<h4><a href="#">a plus</a></h4>
 						<p class="about">Лендинг курсов повышения<br>квалификации</p>
 						<p class="image">
-							<a href="#"><img src="img/aplus-template.jpg" width="360" height="576" alt="Шаблон A plus"></a>
+							<img src="img/aplus-template.jpg" width="360" height="576" alt="Шаблон A plus">
 						</p>
-						<p class="button">
-							<a href="#">9 900 <span>руб.</span></a>
+						<p class="button-orders"> 
+							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="kvast-item">
 						<h4><a href="#">кваст</a></h4>
 						<p class="about">Промо-сайт производителя<br>крафтового кваса</p>
 						<p class="image">
-							<a href="#"><img src="img/kvast-template.jpg" width="360" height="576" alt="Шаблон Промо-сайта производителя крафтового кваса"></a>
+							<img src="img/kvast-template.jpg" width="360" height="576" alt="Шаблон Промо-сайта производителя крафтового кваса">
 						</p>
-						<p class="button">
-							<a href="#">9 900 <span>руб.</span></a>
+						<p class="button-orders"> 
+							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 				</ul>
-			</section>
-			<ul class="pagination-list">
 				<h2 class="visually-hidden">Ссылки на сраницы</h2>
-				<li class="pagination-item-current"><a href="#">1</a></li>
-				<li class="pagination-item"><a href="#">2</a></li>
-				<li class="pagination-item"><a href="#">3</a></li>
-				<li class="pagination-item"><a href="#">следующая</a></li>
-			</ul> <!-- не надо загонять в section? -->
+				<ul class="pagination-list">
+					<li class="pagination-item-current">1</li>
+					<li class="pagination-item"><a href="#">2</a></li>
+					<li class="pagination-item"><a href="#">3</a></li>
+					<li class="pagination-item"><a href="#">Следующая</a></li>
+				</ul>
+		</section>
 		</main>
 		<footer class="main-footer">
 			<div class="map">
@@ -205,7 +201,7 @@
 					<input class="field-name" id="user-name" name="name" type="text" placeholder="Имя Фамилия">
 				</p>
 				<p>
-					<label for="user-email">Ваше e-mail:</label><br>
+					<label for="user-email">Ваш e-mail:</label><br>
 					<input class="field-email" id="user-email" name="email" type="email" placeholder="email@example.com">
 				</p>
 				<p>
