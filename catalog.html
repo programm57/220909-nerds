@@ -14,7 +14,7 @@
 				<ul class="site-navigation">
 					<li><a href="studio.html">Студия</a></li>
 					<li><a href="clients.html">Клиенты</a></li>
-					<li><a class="site-navigation-current">Магазин</a></li>
+					<li class="site-navigation-current"><a>Магазин</a></li>
 					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
 				<ul class="basket-link">
@@ -28,7 +28,7 @@
 				<h2 class="visually-hidden">Фильтры товаров</h2>
 				<form class="filter" method="get" action="https://echo.htmlacademy">				
 					<fieldset>
-						<legend>Стоимость</legend>
+						<legend>Стоимость:</legend>
 						<button class="cost-button-min" type="button">Минимальная цена</button>
 						<button class="cost-button-max" type="button">Максимальная цена</button>
 						<p class="cost-field">
@@ -41,7 +41,7 @@
 						</p>
 					</fieldset>
 					<fieldset>
-						<legend>Сетка</legend>
+						<legend>Сетка:</legend>
 						<ul>
 							<li class="filter-option">
 								<input class="visually-hidden" type="radio" name="grid" value="adaptive" id="filter-adapt" checked>
@@ -58,7 +58,7 @@
 						</ul>
 					</fieldset>
 					<fieldset>
-						<legend>Особенности</legend>
+						<legend>Особенности:</legend>
 						<ul>
 							<li class="filter-option">
 								<input class="visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
@@ -86,13 +86,15 @@
 				</form>	
 			</section>
 			<div class="sort">
-				<h2>Сортировать</h2>
+				<h2>Сортировать:</h2>
 				<ul class="sort-list">
-					<li class="sort-price-current">По цене</li>
+					<li class="sort-price-current"><a>По цене</a></li>
 					<li class="sort-type"><a href="#">По типу</a></li>
 					<li class="sort-name"><a href="#">По названию</a></li> 
-					<li class="sort-down-current">По убыванию</li>
-					<li class="sort-up"><a href="#">По возрастанию</a></li>
+				</ul>	
+				<ul clas="sort-kind">
+					<li class="sort-down"><a href="#">По убыванию</li>
+					<li class="sort-up-current"><a>По возрастанию</a></li>
 				</ul>
 			</div>
 			<section class="templates">
@@ -100,68 +102,72 @@
 				<ul class="template-list">
 					<li class="sedona-item">
 						<h4><a href="#">Sedona</a></h4>
-						<p class="about">Инофрмационный сайт<br>для туристов</p>
+						<p class="about">Инофрмационный сайт<br>
+						для туристов</p>
 						<p class="image">
 							<img src="img/sedona-template.jpg" width="360" height="576" alt="Шаблон Седона">
 						</p> 
 						<p class="button-orders"> 
-							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
+							<button class="button-order1" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="pink-item">
 						<h4><a href="#">Pink app</a></h4>
-						<p class="about">Продуктовый лендинг<br> приложения для iOS и Android</p>
+						<p class="about">Продуктовый лендинг<br>
+						приложения для iOS и Android</p>
 						<p class="image">
 							<img src="img/pink-template.jpg" width="360" height="576" alt="Шаблон Pink app">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order2" type="submit">9 900 <span>руб.</span></button>
+							<button class="button-order2" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="barbershop-item">
 						<h4><a href="#">Barbershop</a></h4>
-						<p class="about">Сайт салоны красоты.<br>Для мужчин, да</p>
+						<p class="about">Сайт салоны красоты.<br>
+						Для мужчин, да</p>
 						<p class="image">
 							<img src="img/barbershop-template.jpg" width="360" height="576" alt="Шаблон Барбершопа">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
+							<button class="button-order3" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="mishka-item">
 						<h4><a href="#">Mishka</a></h4>
-						<p class="about">Интернет-магазин<br>вязаных игрушек</p>
+						<p class="about">Интернет-магазин<br>
+						вязаных игрушек</p>
 						<p class="image">
 							<img src="img/mishka-template.jpg" width="360" height="576" alt="Шаблон интернет-магазина вязаных игрушек">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
+							<button class="button-order4" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li> 				
 					<li class="aplus-item">
-						<h4><a href="#">a plus</a></h4>
+						<h4><a href="#">A plus</a></h4>
 						<p class="about">Лендинг курсов повышения<br>квалификации</p>
 						<p class="image">
 							<img src="img/aplus-template.jpg" width="360" height="576" alt="Шаблон A plus">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
+							<button class="button-order5" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="kvast-item">
-						<h4><a href="#">кваст</a></h4>
+						<h4><a href="#">Кваст</a></h4>
 						<p class="about">Промо-сайт производителя<br>крафтового кваса</p>
 						<p class="image">
 							<img src="img/kvast-template.jpg" width="360" height="576" alt="Шаблон Промо-сайта производителя крафтового кваса">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order1" type="submit">9 900 <span>руб.</span></button>
+							<button class="button-order6" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 				</ul>
 				<h2 class="visually-hidden">Ссылки на сраницы</h2>
 				<ul class="pagination-list">
-					<li class="pagination-item-current">1</li>
+					<li class="pagination-item-current"><a>1</a></li>
 					<li class="pagination-item"><a href="#">2</a></li>
 					<li class="pagination-item"><a href="#">3</a></li>
 					<li class="pagination-item"><a href="#">Следующая</a></li>
@@ -183,9 +189,9 @@
 			</div>
 			<div class="footer-social">
 				<ul>
-					<li><a class="button-vk" href="#">Вконтакте</a></li>
-					<li><a class="button-facebook" href="#">Фейсбук</a></li>
-					<li><a class="button-instagram" href="#">Инстаграм</a></li>
+					<li class="button-vk"><a href="#">Вконтакте</a></li>
+					<li class="button-facebook"><a href="#">Фейсбук</a></li>
+					<li class="button-instagram"><a href="#">Инстаграм</a></li>
 				</ul>
 			</div>
 			<div class="footer-discount">
