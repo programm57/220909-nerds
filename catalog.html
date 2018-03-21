@@ -5,155 +5,216 @@
 		<title>Каталог Нёрдс</title>
 	</head>
 	<body>
-	<header class="main-header">
-		<nav class="main-navigation">
-			<a class="main-header-logo" href="index.html">
-				<img src="img/logo.svg" width="160" height="65" alt="Логотип Нердс">
-			</a>
-			<ul class="site-navigation">
+		<header class="main-header">
+			<nav class="main-navigation">
+				<a class="main-header-logo" href="index.html">
+					<img src="img/logo.svg" width="160" height="65" alt="Логотип Нердс">
+				</a>
 				<h2 class="visually-hidden">Разделы сайта</h2>
-				<li><a href="studio.html">Студия</a></li>
-				<li><a href="clients.html">Клиенты</a></li>
-				<li><a class="site-navigation-current" href="catalog.html">Магазин</a></li>
-				<li><a href="contacts.html">Контакты</a></li>
-			</ul>
-			<ul class="basket-link">
-				<li><a href="#">Корзина</a></li> 
-			</ul>
-		</nav>
-	</header>
-	<main class="container">
-		<h1>Магазин готовых шаблонов</h1>
-		<section class="filters">
-			<h2 class="visually-hidden">Фильтры</h2>
-			<!--Форма будет позже -->
-		</section>
-		<section class="sort">
-			<h2 class="visually-hidden">Сортировка шаблонов</h2>
-			<b>сортировать</b>
-			<ul class="sort-list">
-				<li class="sort-price">по цене</li>
-				<li class="sort-type">по типу</li>
-				<li class="sort-name">по названию</li> 
-			</ul>
-		</section>
-		<section class="templates">
-			<h2 class="visually-hidden">Каталог шаблонов</h2>
-			<ul class="template-list">
-				<li class="sedona-item">
-					<h4><a href="#">sedona</a></h4> <!-- а нужна ли здесь ссылка? -->
-					<p class="about">Инофрмационный сайт<br>для туристов</p>
-					<p class="image">
-						<a href="#"><img src="img/sedona-template.jpg" width="360" height="576" alt="Шаблон Седона"></a>
-					</p> <!--а может быть тут лучше присвоить класс ссылке и убрать параграф!? -->
-					<p class="button"> 
-						<a href="#">9900 руб.</a> <!-- и тут? -->
-					</p>
-				</li>
-				<li class="pink-item">
-					<h4><a href="#">pink app</a></h4>
-					<p class="about">Продуктовый лендинг<br> приложения для iOS и Android</p>
-					<p class="image">
-						<a href="#"><img src="img/pink-template.jpg" width="360" height="576" alt="Шаблон Pink app"></a>
-					</p>
-					<p class="button">
-						<a href="#">9900 руб.</a>
-					</p>
-				</li>
-				<li class="barbershop-item">
-					<h4><a href="#">barbershop</a></h4>
-					<p class="about">Сайт салоны красоты.<br>Для мужчин, да</p>
-					<p class="image">
-						<a href="#"><img src="img/barbershop-template.jpg" width="360 height="576" alt="Шаблон Барбершопа"></a>
-					</p>
-					<p class="button">
-						<a href="#">9900 руб.</a>
-					</p>
-				</li>
-				<li class="mishka-item">
-					<h4><a href="#">mishka</a></h4>
-					<p class="about">Интернет-магазин<br>вязаных игрушек</p>
-					<p class="image">
-						<a href="#"><img src="img/mishka-template.jpg" width=360"" height="576" alt="Шаблон интернет-магазина вязаных игрушек"></a>
-					</p>
-					<p class="button">
-						<a href="#">9900 руб.</a>
-					</p>
-				</li> 				
-				<li class="aplus-item">
-					<h4><a href="#">a plus</a></h4>
-					<p class="about">Лендинг курсов повышения<br>квалификации</p>
-					<p class="image">
-						<a href="#"><img src="img/aplus-template.jpg" width="360" height="576" alt="Шаблон A plus"></a>
-					</p>
-					<p class="button">
-						<a href="#">9900 руб.</a>
-					</p>
-				</li>
-				<li class="kvast-item">
-					<h4><a href="#">кваст</a></h4>
-					<p class="about">Промо-сайт производителя<br>крафтового кваса</p>
-					<p class="image">
-						<a href="#"><img src="img/kvast-template.jpg" width="360" height="576" alt="Шаблон Промо-сайта производителя крафтового кваса"></a>
-					</p>
-					<p class="button">
-						<a href="#">9900 руб.</a>
-					</p>
-				</li>
-			</ul>
-		</section>
-		<ul class="pagination-list">
-			<h2 class="visually-hidden">Ссылки на сраницы</h2>
-			<li class="pagination-item-current"><a href="#">1</a></li>
-			<li class="pagination-item"><a href="#">2</a></li>
-			<li class="pagination-item"><a href="#">3</a></li>
-			<li class="pagination-item"><a href="#">следующая</a></li>
-		</ul> <!-- не надо загонять в section? -->
-	</main>
-	<footer class="main-footer">
-		<div class="map">
-			<h2 class="visually-hidden">Карта</h2>
-			<img class="map-picture" src="img/map.jpg" width="1440" height="416" alt="Карта">
-		</div>			
-		<div class="contacts">
-			<h2 class="visually-hidden">Контакты</h2>
-			<h4>nerds design studio</h4>
-			<p>191186, Санкт-Петербург,<br>ул. Конюшенная, д. 19/8</p>
-			<p>тел. +7(812)275-75-75</p>
-			<a class="button-letter-to-nerds" href="#">Напишите нам</a>
-		</div>
-		<div class="footer-social">
-			<ul>
-				<li><a class="button-vk" href="#">Вконтакте</a></li>
-				<li><a class="button-facebook" href="#">Фейсбук</a></li>
-				<li><a class="button-instagram" href="#">Инстаграм</a></li>
-			</ul>
-		</div>
-		<div class="footer-discount">
-			<b>Давайте дружить, это выгодно</b>
-			<p>Скидка 10% для друзей из социальных сетей</p>
-		</div>
-	</footer>
-		<form class="letter-to-nerds" action="#" method="post">
-			<h2>Напишите нам</h2>
-			<span class="letter-to-nerds-close">x</span> <!-- почти уверен, что неправильно, таким образом я хотел отоброзить элемент закрытия формы? -->
-			<div class="name-email">
-				<label>
-					<b>Ваше имя:</b> 
-					<input type="text" name="login" id="login" placeholder="Имя Фамилия"> <!-- вообще нужен ли id? -->
-				</label>
-				<label>
-					<b>Ваш e-mail:</b> 	
-					<input type="email" name="email" id="email" placeholder="email@example.com"> 
-				</label>
-			</div> <!-- что в таких случаях лучше применять div или p?? -->
-			<div class="text-of-the-letter">
-				<label>
-					<b>Текст письма:</b><br>
-					<textarea name="letter" rows="4" cols="" placeholder="В свободной форме" id="letter"></textarea>
-				</label>
+				<ul class="site-navigation">
+					<li><a href="studio.html">Студия</a></li>
+					<li><a href="clients.html">Клиенты</a></li>
+					<li><a class="site-navigation-current" href="catalog.html">Магазин</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+				</ul>
+				<ul class="basket-link">
+					<li><a href="#">Корзина</a></li> 
+				</ul>
+			</nav>
+		</header>
+		<main class="container">
+			<h1>Магазин готовых шаблонов</h1>			
+			<section class="filters">
+				<h2 class="visually-hidden">Фильтры товаров</h2>
+				<form class="filter" method="get" action="https://echo.htmlacademy">
+					<fieldset>
+						<legend>Стоимость</legend>
+						<p class="cost">
+							<label>
+								<input type="range" name="cost" min="0" max="20000" step="1" value="">	
+							</label>
+						</p>
+						<p class="cost-number">
+							<label>
+								От <input type="text" name="from" placeholder="0">
+							</label>
+							<label>
+								До <input type="text" name="from" placeholder="15000">
+							</label> <!-- сделал так, не совсем разобрался как должно быть -->
+						</p>
+					</fieldset>
+					<fieldset>
+						<legend>Сетка</legend>
+						<ul>
+							<li class="filter-option">
+								<input class="visually-hidden" type="radio" name="grid" value="adaptive" id="filter-adapt" checked>
+								<label for="filter-adapt">Адаптиваная</label>
+							</li>
+							<li class="filter-option">
+								<input class="visually-hidden" type="radio" name="grid" value="fixed" id="filter-fixed">
+								<label for="filter-fixed">Фиксировання</label>
+							</li>
+							<li class="filter-option">
+								<input class="visually-hidden" type="radio" name="grid" value="rubber" id="filter-rubber">
+								<label for="filter-rubber">Резиновая</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>Особенности</legend>
+						<ul>
+							<li class="filter-option">
+								<input class="visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
+								<label for="filter-slider">Слайдер</label>
+							</li>
+							<li class="filter-option">
+								<input class="visually-hidden" type="checkbox" name="block" id="filter-block">
+								<label for="filter-block">Блок преимуществ</label>
+							</li>
+							<li class="filter-option">
+								<input class="visually-hidden" type="checkbox" name="news" id="filter-news" checked>
+								<label for="filter-news">Новости</label>					
+							</li>
+							<li class="filter-option">
+								<input class="visually-hidden" type="checkbox" name="gallery" id="filter-gallery">
+								<label for="filter-gallery">Галерея</label>
+							</li>
+							<li class="filter-option">
+								<input class="visually-hidden" type="checkbox" name="basket" id="filter-basket">
+								<label for="filter-basket">Корзина</label>
+							</li>						
+						</ul>
+					</fieldset>
+					<button type="submit" class="filter-button">Показать</button>
+				</form>	
+			</section>
+			<fiedset class="sort">
+				<h2 class="visually-hidden">Сортировка шаблонов</h2>
+				<legend>Сортировать</legend>
+				<ul class="sort-list">
+					<li class="sort-price"><a href="#">По цене</a></li>
+					<li class="sort-type"><a href="#">По типу</a></li>
+					<li class="sort-name"><a href="#">По названию</a></li> 
+					<li class="sort-down"><a href="#">По убыванию</a></li>
+					<li class="sort-up"><a href="#">По возрастанию</a></li>
+				</ul>
+			</fieldset>
+			<section class="templates">
+				<h2 class="visually-hidden">Каталог шаблонов</h2>
+				<ul class="template-list">
+					<li class="sedona-item">
+						<h4><a href="#">Sedona</a></h4> <!-- а нужна ли здесь ссылка? -->
+						<p class="about">Инофрмационный сайт<br>для туристов</p>
+						<p class="image">
+							<a href="#"><img src="img/sedona-template.jpg" width="360" height="576" alt="Шаблон Седона"></a>
+						</p> <!--а может быть тут лучше присвоить класс ссылке и убрать параграф!? -->
+						<p class="button"> 
+							<a href="#">9 900 <span>руб.</span></a> <!-- и тут? -->
+						</p>
+					</li>
+					<li class="pink-item">
+						<h4><a href="#">Pink app</a></h4>
+						<p class="about">Продуктовый лендинг<br> приложения для iOS и Android</p>
+						<p class="image">
+							<a href="#"><img src="img/pink-template.jpg" width="360" height="576" alt="Шаблон Pink app"></a>
+						</p>
+						<p class="button">
+							<a href="#">9 900 <span>руб.</span></a>
+						</p>
+					</li>
+					<li class="barbershop-item">
+						<h4><a href="#">Barbershop</a></h4>
+						<p class="about">Сайт салоны красоты.<br>Для мужчин, да</p>
+						<p class="image">
+							<a href="#"><img src="img/barbershop-template.jpg" width="360 height="576" alt="Шаблон Барбершопа"></a>
+						</p>
+						<p class="button">
+							<a href="#">9 900 <span>руб.</span></a>
+						</p>
+					</li>
+					<li class="mishka-item">
+						<h4><a href="#">Mishka</a></h4>
+						<p class="about">Интернет-магазин<br>вязаных игрушек</p>
+						<p class="image">
+							<a href="#"><img src="img/mishka-template.jpg" width=360"" height="576" alt="Шаблон интернет-магазина вязаных игрушек"></a>
+						</p>
+						<p class="button">
+							<a href="#">9 900 <span>руб.</span></a>
+						</p>
+					</li> 				
+					<li class="aplus-item">
+						<h4><a href="#">a plus</a></h4>
+						<p class="about">Лендинг курсов повышения<br>квалификации</p>
+						<p class="image">
+							<a href="#"><img src="img/aplus-template.jpg" width="360" height="576" alt="Шаблон A plus"></a>
+						</p>
+						<p class="button">
+							<a href="#">9 900 <span>руб.</span></a>
+						</p>
+					</li>
+					<li class="kvast-item">
+						<h4><a href="#">кваст</a></h4>
+						<p class="about">Промо-сайт производителя<br>крафтового кваса</p>
+						<p class="image">
+							<a href="#"><img src="img/kvast-template.jpg" width="360" height="576" alt="Шаблон Промо-сайта производителя крафтового кваса"></a>
+						</p>
+						<p class="button">
+							<a href="#">9 900 <span>руб.</span></a>
+						</p>
+					</li>
+				</ul>
+			</section>
+			<ul class="pagination-list">
+				<h2 class="visually-hidden">Ссылки на сраницы</h2>
+				<li class="pagination-item-current"><a href="#">1</a></li>
+				<li class="pagination-item"><a href="#">2</a></li>
+				<li class="pagination-item"><a href="#">3</a></li>
+				<li class="pagination-item"><a href="#">следующая</a></li>
+			</ul> <!-- не надо загонять в section? -->
+		</main>
+		<footer class="main-footer">
+			<div class="map">
+				<h2 class="visually-hidden">Карта</h2>
+				<img class="map-picture" src="img/map.jpg" width="1440" height="416" alt="Карта">
+			</div>			
+			<div class="contacts">
+				<h2 class="visually-hidden">Контакты</h2>
+				<h4>Nerds design studio</h4>
+				<p>191186, Санкт-Петербург,<br>
+				ул. Конюшенная, д. 19/8</p>
+				<p>тел. +7(812)275-75-75</p>
+				<a class="button-letter" href="#">Напишите нам</a>
 			</div>
-			<a href="#">Отправить</a> <!--а можно ли такие элементы делать с помощью button? -->
-		</form>
+			<div class="footer-social">
+				<ul>
+					<li><a class="button-vk" href="#">Вконтакте</a></li>
+					<li><a class="button-facebook" href="#">Фейсбук</a></li>
+					<li><a class="button-instagram" href="#">Инстаграм</a></li>
+				</ul>
+			</div>
+			<div class="footer-discount">
+				<b>Давайте дружить, это выгодно</b>
+				<p>Скидка 10% для друзей из социальных сетей</p>
+			</div>
+		</footer>
+		<section class="feedback">
+			<form class="letter" action="https://echo.htmlacademy.ru" method="post">
+				<h3>Напишите нам</h3>
+				<p>
+					<label for="user-name">Ваше имя:</label><br>
+					<input class="field-name" id="user-name" name="name" type="text" placeholder="Имя Фамилия">
+				</p>
+				<p>
+					<label for="user-email">Ваше e-mail:</label><br>
+					<input class="field-email" id="user-email" name="email" type="email" placeholder="email@example.com">
+				</p>
+				<p>
+					<label for="user-letter">Текст письма:</label><br>
+					<textarea id="user-letter" name="letter" type="text" rows="4" cols="" placeholder="В свободной форме"></textarea>	
+				</p>
+				<button class="button" typ="submit">Отправить</button>
+			</form>			
+			<button class="feedback-close" type="button">Закрыть</button>
+		</section>	
 	</body>
 </html>
