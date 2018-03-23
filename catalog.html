@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Каталог Нёрдс</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style-index.css">
 	</head>
 	<body>
 		<header class="main-header">
@@ -23,11 +26,11 @@
 			</nav>
 		</header>
 		<main class="container">
-			<h1>Магазин готовых шаблонов</h1>			
+			<h1 class="page-title">Магазин готовых шаблонов</h1>			
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтры товаров</h2>
 				<form class="filter" method="get" action="https://echo.htmlacademy">				
-					<fieldset>
+					<fieldset class="cost-section">
 						<legend>Стоимость:</legend>
 						<button class="cost-button-min" type="button">Минимальная цена</button>
 						<button class="cost-button-max" type="button">Максимальная цена</button>
@@ -40,7 +43,7 @@
 							</label>
 						</p>
 					</fieldset>
-					<fieldset>
+					<fieldset class="grid-section">
 						<legend>Сетка:</legend>
 						<ul>
 							<li class="filter-option">
@@ -57,7 +60,7 @@
 							</li>
 						</ul>
 					</fieldset>
-					<fieldset>
+					<fieldset class="features-section">
 						<legend>Особенности:</legend>
 						<ul>
 							<li class="filter-option">
