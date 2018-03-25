@@ -5,7 +5,7 @@
 		<title>Каталог Нёрдс</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style-index.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<header class="main-header">
@@ -47,15 +47,15 @@
 						<legend>Сетка:</legend>
 						<ul>
 							<li class="filter-option">
-								<input class="visually-hidden" type="radio" name="grid" value="adaptive" id="filter-adapt" checked>
+								<input class="visually-hidden filter-input filter-input-checked" type="radio" name="grid" value="adaptive" id="filter-adapt" checked>
 								<label for="filter-adapt">Адаптиваная</label>
 							</li>
 							<li class="filter-option">
-								<input class="visually-hidden" type="radio" name="grid" value="fixed" id="filter-fixed">
+								<input class="visually-hidden filter-input" type="radio" name="grid" value="fixed" id="filter-fixed">
 								<label for="filter-fixed">Фиксировання</label>
 							</li>
 							<li class="filter-option">
-								<input class="visually-hidden" type="radio" name="grid" value="rubber" id="filter-rubber">
+								<input class="visually-hidden filter-input" type="radio" name="grid" value="rubber" id="filter-rubber">
 								<label for="filter-rubber">Резиновая</label>
 							</li>
 						</ul>
@@ -64,23 +64,23 @@
 						<legend>Особенности:</legend>
 						<ul>
 							<li class="filter-option">
-								<input class="visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
+								<input class="visually-hidden filter-input filter-input-checked" type="checkbox" name="slider" id="filter-slider" checked>
 								<label for="filter-slider">Слайдер</label>
 							</li>
 							<li class="filter-option">
-								<input class="visually-hidden" type="checkbox" name="block" id="filter-block">
+								<input class="visually-hidden filter-input" type="checkbox" name="block" id="filter-block">
 								<label for="filter-block">Блок преимуществ</label>
 							</li>
 							<li class="filter-option">
-								<input class="visually-hidden" type="checkbox" name="news" id="filter-news" checked>
+								<input class="visually-hidden filter-input filter-input-checked" type="checkbox" name="news" id="filter-news" checked>
 								<label for="filter-news">Новости</label>					
 							</li>
 							<li class="filter-option">
-								<input class="visually-hidden" type="checkbox" name="gallery" id="filter-gallery">
+								<input class="visually-hidden filter-input" type="checkbox" name="gallery" id="filter-gallery">
 								<label for="filter-gallery">Галерея</label>
 							</li>
 							<li class="filter-option">
-								<input class="visually-hidden" type="checkbox" name="basket" id="filter-basket">
+								<input class="visually-hidden filter-input" type="checkbox" name="basket" id="filter-basket">
 								<label for="filter-basket">Корзина</label>
 							</li>						
 						</ul>
@@ -111,7 +111,7 @@
 							<img src="img/sedona-template.jpg" width="360" height="576" alt="Шаблон Седона">
 						</p> 
 						<p class="button-orders"> 
-							<button class="button-order1" type="button">9 900 <span>руб.</span></button>
+							<button class="btn-order button-order1" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="pink-item">
@@ -122,7 +122,7 @@
 							<img src="img/pink-template.jpg" width="360" height="576" alt="Шаблон Pink app">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order2" type="button">9 900 <span>руб.</span></button>
+							<button class="btn-order button-order2" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="barbershop-item">
@@ -133,7 +133,7 @@
 							<img src="img/barbershop-template.jpg" width="360" height="576" alt="Шаблон Барбершопа">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order3" type="button">9 900 <span>руб.</span></button>
+							<button class="btn-order button-order3" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="mishka-item">
@@ -144,7 +144,7 @@
 							<img src="img/mishka-template.jpg" width="360" height="576" alt="Шаблон интернет-магазина вязаных игрушек">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order4" type="button">9 900 <span>руб.</span></button>
+							<button class="btn-order button-order4" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li> 				
 					<li class="aplus-item">
@@ -154,7 +154,7 @@
 							<img src="img/aplus-template.jpg" width="360" height="576" alt="Шаблон A plus">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order5" type="button">9 900 <span>руб.</span></button>
+							<button class="btn-order button-order5" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 					<li class="kvast-item">
@@ -164,7 +164,7 @@
 							<img src="img/kvast-template.jpg" width="360" height="576" alt="Шаблон Промо-сайта производителя крафтового кваса">
 						</p>
 						<p class="button-orders"> 
-							<button class="button-order6" type="button">9 900 <span>руб.</span></button>
+							<button class="btn-order button-order6" type="button">9 900 <span>руб.</span></button>
 						</p>
 					</li>
 				</ul>

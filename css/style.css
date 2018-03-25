@@ -1,0 +1,489 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #000000;
+
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%; 
+}
+
+*::before, *::after {
+	box-sizing: inherit;
+}
+
+/*--------------- Main-navigation-style ---------------*/
+.main-header {
+	background-color: #eeeeee;
+
+}
+
+.main-navigation {
+	font-size: 16px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.site-navigation,
+.basket-link {
+	list-style: none;
+}
+
+.site-navigation a,
+.basket-link a {
+	color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.basket-link a:hover,
+.basket-link a:focus {
+	color: #fb565a;
+}
+
+.site-navigation a:active,
+.basket-link a:active {
+	color: #000000;
+	opacity: 0.2;
+}
+
+
+/*--------------- Slider-style ---------------*/
+.sliders {
+	background-color: #eeeeee;
+}
+
+.sliders-list {
+	list-style: none;
+
+	text-align: left;
+}
+
+.sliders-list h3 {
+	font-size: 55px;
+	line-height: 55px;
+}
+
+.sliders-list a {
+	text-decoration: none;
+
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	background-color: #fb565a;
+}
+
+.sliders-list a:hover,
+.sliders-list a:focus {
+	color: white;
+	background-color: #e74246;
+}
+
+.sliders-list a:active {
+	background-color: #d7373b
+}
+
+
+/*--------------- Services-style ---------------*/
+.services-list {
+	list-style: none;
+}
+
+.services-list h3 {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.services-list a {
+	text-decoration: none;
+
+	font-size: 16px;
+	line-height: 18px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.web-site a {
+	background-color: #fb565a;
+}
+
+.aps a {
+	background-color: #00ca74;
+}
+
+.presentation a {
+	background-color: #efc84a
+}
+
+.services-list .web-site a:hover,
+.services-list .web-site a:focus {
+	background-color: #e74246;
+}
+
+.services-list .web-site a:active {
+	background-color: #d7373b;
+}
+
+.services-list .aps a:hover,
+.services-list .aps a:focus {
+	background-color: #00bc6c;
+}
+
+.services-list .aps a:active {
+	background-color: #00aa62;
+}
+
+.services-list .presentation a:hover,
+.services-list .presentation a:focus {
+	background-color: #eab534;
+}
+
+.services-list .presentation a:active {
+	background-color: #e5a722;
+}
+
+
+/*--------------- About-style-left ---------------*/
+.about {
+	text-align: left;	
+}
+
+.slogan {
+	font-size: 45px;
+	line-height: 45px;
+}
+
+.about h4 {
+	text-transform: uppercase;
+}
+
+
+/*--------------- About-style-right ---------------*/
+.statistics {
+	list-style: none;
+}
+
+.block2004 h4 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.statistics .number {
+	font-size: 45px;
+	line-height: 10.06px;
+	font-weight: bold;
+}
+
+.statistics .percent {
+	font-size: 20px; /* запутался, не могу сообразить как правильно сделать */
+	vertical-align: super;
+
+	margin-top: -13px;
+	position: absolute; /* ничего не произошло... */
+}
+
+.statistics .tagging {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+
+/*--------------- Partners-style ---------------*/
+.partners-list {
+	list-style: none;
+}
+
+.partners-list a {
+	opacity: 0.2;
+}
+
+.partners-list a:hover,
+.partners-list a:focus {
+	opacity: 1;
+}
+
+.partners-list a:active {
+	opacity: 0.1;
+}
+
+/*--------------- Footer-style ---------------*/
+.contacts h4 {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.contacts p {
+	font-size: 16px;
+	line-height: 18px;
+	color: #61686c;
+}
+
+.contacts a {
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: white;
+	background-color: #fb565a;
+}
+
+.footer-social ul {
+	list-style: none;
+}
+
+.footer-discount b {
+	font-size: 36px;
+	list-style: 36px;
+	font-weight: bold;
+}
+
+.footer-discount p {
+	font-size: 16px;
+	list-style: 22px;
+	color: #444444;
+}
+
+
+/*--------------- Feedback-style ---------------*/
+.feedback input {
+	font: inherit;
+}
+
+.letter h3 {
+	font-size: 45px;
+	list-style: 45px;
+}
+
+.letter label {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+.letter input,
+.letter textarea {
+	font-size: 16px;
+	line-height: 18px;
+	color: #000000;
+	opacity: 0.5;
+
+	background-color: #ffffff;
+	border: 2px solid #d7dcde;
+}
+
+.letter input:hover,
+.letter textarea:hover {
+	border-color: #b4b9bb;
+}
+
+.letter input:focus,
+.letter textarea:focus {
+	border-color: #000000;
+}
+
+.button {
+	font-size: 16px;
+	line-height: 18px;
+	color: white;
+	background-color: #fb565a;
+	text-transform: uppercase;
+}
+
+
+
+/*--------------- CATALOG ---------------*/
+.filters ul {
+	list-style: none;
+}
+
+.page-title {
+	font-size: 55px;
+	line-height: 55px;
+
+	background-color: #eeeeee;
+	text-align: center;
+}
+
+
+/*--------------- Filters-style ---------------*/
+.filter fieldset {
+	border: none;
+}
+
+.filter legend {	
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+
+	text-transform: uppercase;
+}
+
+.filter {
+	list-style: none;
+
+	font-size: 16px;
+	line-height: 20px;
+	color: #283136;
+}
+
+.filter-input:hover + label, 
+.filter-input:focus + label {
+	color: #000000;
+}
+
+.filter-input:disabled + label {
+	color: #283136;
+
+	opacity: 0.3;
+}
+
+.cost-section {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.cost-section label {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.filter button {
+	font-size: 16px;
+	list-style: 18px;
+	color: #000000;
+
+	height: 50px;
+	width: 260px;
+
+	background-color: #eeeeee;
+}
+/*---------------Sort-style ---------------*/
+.sort h2 {
+	font-size: 18px;
+	line-height: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+
+	color: #000000;
+}
+
+.sort ul {
+	list-style: none;
+}
+
+.sort a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.sort-list li {
+		font-size: 14px;
+		line-height: 18px;
+		text-transform: uppercase;
+
+
+		color: #000000;
+}
+
+.sort-type,
+.sort-name {
+	opacity: 0.3;
+}
+
+
+/*---------------Стили шаблонов (каталог) ---------------*/
+.template-list {
+	list-style: none;
+}
+
+.template-list h4 {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	color: #000000
+}
+
+.about {
+	font-size: 16px;
+	line-height: 18px;
+
+	color: #666666;
+}
+
+.btn-order {
+	font-size: 16px;
+	line-height: 18px;
+	color: #eeeeee;
+
+	background-color: #fb565a;
+
+	height: 50px;
+	width: 200px;
+}
+
+.button-orders button:hover,
+.button-orders button:focus {
+	background-color: #e74246;
+}
+
+.button-orders button:active {
+	background-color: #d7373b;
+}
+
+
+.btn-order span {
+	font-size: 16px;
+	line-height: 18px;	
+	color: #eeeeee;
+
+	text-transform: uppercase;
+}
+
+
+/*---------------Ссылки на страницы (каталог) ---------------*/
+.pagination-list {
+	list-style: none;
+
+	font-size: 14px;
+	line-height: 18px;
+	color: #000000;
+
+	text-transform: uppercase;
+}
+
+.pagination-item-current {
+	background-color: #ffffff;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+	background-color: #dfdfdf;
+}
+
+.pagination-item a:active {
+	color: #000000;
+	opacity: 0.3;
+	
+	background-color: #d5d5d5;
+}
