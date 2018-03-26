@@ -11,10 +11,10 @@
 	<body>
 		<header class="main-header">
 			<nav class="main-navigation">
+			<h2 class="visually-hidden">Разделы сайта</h2>
 				<a class="main-header-logo">
 					<img src="img/logo.svg" width="160" height="65" alt="Нёрдс">
 				</a>
-				<h2 class="visually-hidden">Разделы сайта</h2>
 				<ul class="site-navigation">
 					<li><a href="studio.html">Студия</a></li>
 					<li><a href="clients.html">Клиенты</a></li>
@@ -54,19 +54,19 @@
 			<section class="services">
 				<h2 class="visually-hidden">Виды работ</h2>
 				<ul class="services-list">
-					<li class="web-site">
+					<li class="web-site service-item">
 						<img src="img/web-site.png" width="300" height="146" alt="Веб-Сайты">
 						<h3>Веб-сайты</h3>
 						<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
 						<a href="catalog.html">Заказать</a>
 					</li>
-					<li class="aps">
+					<li class="aps service-item">
 						<img src="img/apps.png" width="300" height="146" alt="Приложения">
 						<h3>Приложения</h3>
 						<p>Покорите топ-10 приложений в AppStore и Google Play</p>
 						<a href="catalog.html">Заказать</a>
 					</li>
-					<li class="presentation">
+					<li class="presentation service-item">
 						<img src="img/presentation.png" width="300" height="146" alt="Презентации">
 						<h3>Презентации</h3>
 						<p>Вы даже не подозреваете, насколько вы изумительны!</p>
@@ -74,35 +74,37 @@
 					</li>
 				</ul>
 			</section> 
-			<section class="about">
-				<h2 class="visually-hidden">О студии</h2> 		
-				<p class="slogan"><b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b></p>
-				<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-				<h4>Выполняем заказы на разработку:</h4>
-				<ul class="orders">
-					<li>Веб-сайтов любой сложности</li>
-					<li>Мобильных приложений для iOS и Android</li>
-					<li>Слайдшоу и видео для корпоративных презентаций</li>
-				</ul>
-			</section>
-			<section class="block2004">
-				<p><img class="logo-nerds2" src="img/logo-nerds.png" width="360" height="208" alt="Логотип Нёрдс"></p>
-				<h4>С 2004 года любим точность во всем:</h4>
-				<ul class="statistics">
-					<li>
-						<span class="number">146</span><span class="percent">%</span><br>
-						<span class="tagging">Уровень самоотдачи</span>
-					</li>
-					<li>
-						<span class="number">100</span><span class="percent">%</span><br>
-						<span class="tagging">Соблюдение сроков</span>
-					</li>
-					<li>
-						<span class="number">50</span><span class="percent">%</span><br>
-						<span class="tagging">Минимальная предоплата</span>
-					</li>
-				</ul>
-			</section>
+			<div class="index-colums">
+				<section class="about">
+					<h2 class="visually-hidden">О студии</h2> 		
+					<p class="slogan"><b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+					<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+					<h4>Выполняем заказы на разработку:</h4>
+					<ul class="orders">
+						<li>Веб-сайтов любой сложности</li>
+						<li>Мобильных приложений для iOS и Android</li>
+						<li>Слайдшоу и видео для корпоративных презентаций</li>
+					</ul>
+				</section>
+				<section class="block2004">
+					<p><img class="logo-nerds2" src="img/logo-nerds.png" width="360" height="208" alt="Логотип Нёрдс"></p>
+					<h4>С 2004 года любим точность во всем:</h4>
+					<ul class="statistics">
+						<li>
+							<span class="number">146</span><span class="percent">%</span><br>
+							<span class="tagging">Уровень самоотдачи</span>
+						</li>
+						<li>
+							<span class="number">100</span><span class="percent">%</span><br>
+							<span class="tagging">Соблюдение сроков</span>
+						</li>
+						<li>
+							<span class="number">50</span><span class="percent">%</span><br>
+							<span class="tagging">Минимальная предоплата</span>
+						</li>
+					</ul>
+				</section>
+			</div>	
 			<section class="partners-section">
 				<h2 class="visually-hidden">Работы</h2>
 				<ul class="partners-list">
@@ -142,16 +144,18 @@
 				<p>тел. +7(812)275-75-75</p>
 				<a class="button-letter" href="#">Напишите нам</a>
 			</div>
-			<div class="footer-social">
-				<ul>
-					<li class="button-vk"><a href="#">Вконтакте</a></li>
-					<li class="button-facebook"><a href="#">Фейсбук</a></li>
-					<li class="button-instagram"><a href="#">Инстаграм</a></li>
-				</ul>
-			</div>
-			<div class="footer-discount">
-				<b>Давайте дружить, это выгодно</b>
-				<p>Скидка 10% для друзей из социальных сетей</p>
+			<div class="footer-colums">
+				<div class="footer-social">
+					<ul class="social-type">
+						<li class="button-vk"><a href="#">Вконтакте</a></li>
+						<li class="button-facebook"><a href="#">Фейсбук</a></li>
+						<li class="button-instagram"><a href="#">Инстаграм</a></li>
+					</ul>
+				</div>
+				<div class="footer-discount">
+					<b>Давайте дружить, это выгодно</b>
+					<p>Скидка 10% для друзей из социальных сетей</p>
+				</div>
 			</div>
 		</footer>
 		<section class="feedback">

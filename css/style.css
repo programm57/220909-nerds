@@ -487,3 +487,172 @@ img {
 	
 	background-color: #d5d5d5;
 }
+
+
+
+/*---------------Сеточные стили ---------------*/
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(0,0,0,0);
+}
+
+/*Главная*/
+/*---------------Сетка для навигации---------------*/
+.main-header {
+	background-color: #eeeeee;	
+	width: 100%; /* Задал в прцоентах так как при размере 1440 слишком большое окно */
+	margin: 0;
+	padding: 0;
+}
+
+.main-navigation {
+	display: flex;
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+
+	outline: 3px solid green;
+}
+
+.main-header-logo {
+	width: 160px;
+	height: 65px;
+	margin: 0;
+	padding: 0;
+
+	outline: 3px solid yellow;
+}
+
+.site-navigation {
+	width: 440px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+
+	outline: 3px solid orange;
+}
+
+.basket-link a {
+	margin: 0;
+	padding: 0;
+
+	outline: 3px solid black;
+}
+
+
+/*Слайдер */ 
+
+
+/*---------------Сетка для услуг---------------*/
+.services-list {
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+	outline: 3px solid black;
+}
+
+.service-item {
+	width: 303px;
+}
+
+.services {
+	margin-bottom: 70px;
+}
+
+.index-colums {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+}
+
+
+/*---------------Сетка для описания---------------*/
+.about {
+	width: 663px;
+	min-height: 372px;
+
+	margin-left: 120px;
+	outline: 3px solid orange;
+}
+
+.block2004 {
+	width: 360px;
+	min-height: 411px;
+	margin-right: 120px;
+	outline: 3px solid blue;
+}
+
+.block2004 .statistics {
+	display: flex;
+}
+
+.partners-section {
+	margin: 0;
+	padding: 0;
+}
+
+.partners-list {
+	display: flex;
+	justify-content: space-around;
+ 	outline: 3px solid purple;
+}
+
+
+/*---------------Сетка для футера---------------*/
+
+.contacts {
+	display: block;
+	outline: 3px solid yellow;
+}
+
+.footer-colums {
+	display: flex;
+	justify-content: space-around;
+}
+
+.social-type {
+	display: flex;
+	justify-content: space-between;
+	width: 260px;	
+}
+
+
+/*Каталог*/
+/*---------------Сетка для фильтров---------------*/
+.filters {
+	width: 260px;
+  
+  /* Временно для сетки */
+	min-height: 775px;
+	outline: 3px solid yellow;
+}
+
+.templates {
+	width: 760px;
+
+	/* Временно для сетки */
+	min-height: 1918px;
+	outline: 3px solid blue;
+}
+
+.sort {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.sort-list {
+	display: flex;
+}
+
+.sort-kind {
+	display: flex;
+}
+
+.catalog-columns {
+	display: flex;
+}
