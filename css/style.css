@@ -362,12 +362,10 @@ img {
 
 .filter button {
 	font-size: 16px;
-	list-style: 18px;
+	line-height: 18px;
 	color: #000000;
-
 	height: 50px;
 	width: 260px;
-
 	background-color: #eeeeee;
 }
 /*---------------Сортировка-СТИЛИ ---------------*/
@@ -539,6 +537,7 @@ img {
 .slider-colums {
 	display: flex;
 	flex-direction: row-reverse;
+	justify-content: flex-end;
 	width: 1200px;
 	padding: 0;
 	margin: 0 auto;
@@ -546,14 +545,14 @@ img {
 }
  
 .slider-left {
-	width: 34%;
+	width: 44%;
 	margin: 0;
 	padding: 0;
 	outline: 3px solid orange;
 }
 
 .slider-right {
-	width: 66px;
+	width: 56px;
 	margin: 0;
 	padding: 0;
 }
@@ -590,14 +589,14 @@ img {
 }
 
 .about {
-	width: 66%;
+	width: 66.6666%;
 	margin: 0;
 	padding: 0;
 	outline: 3px solid orange;
 }
 
 .block2004 {
-	width: 34%;
+	width: 33.3333%;
 	margin: 0;
 	padding: 0;
 	outline: 3px solid blue;
@@ -605,7 +604,7 @@ img {
 
 .block2004 .statistics {
 	display: flex;
-	 margin: 0;
+	margin: 0;
 	padding: 0;
 } 
 
@@ -679,45 +678,89 @@ img {
 	padding: 0;
 }
 
+
+
 /*Каталог*/
+/*---------------Сетка для шапки---------------*/
+.page-title {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	padding-bottom: 116px;
+}
+
+
 /*---------------Сетка для фильтров---------------*/
+.catalog-columns {
+	display: flex;
+	justify-content: space-between;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+}
+
 .filters {
-	width: 260px;
-  
-  /* Временно для сетки */
-	min-height: 775px;
+	width: 33.3333%;  
 	outline: 3px solid yellow;
 }
 
 .templates {
-	width: 760px;
-
-	/* Временно для сетки */
-	min-height: 1918px;
+	width: 66.6666%;
 	outline: 3px solid blue;
 }
 
-.sort {
+.sort-columns h2 {
+	margin: 0;
+	padding: 0;
+	outline: 3px solid black;	
+}
+
+.sort-columns {
 	display: flex;
-	justify-content: flex-end;
+	margin: 0;
+	padding: 0;
+	outline: 5px solid red;
 }
 
 .sort-list {
 	display: flex;
+	margin: 0;
+	padding: 0;
+	outline: 3px solid purple;
 }
 
 .sort-kind {
 	display: flex;
-}
-
-.catalog-columns {
-	display: flex;
-}
-
-
-/*КАТАЛОГ*/
-/*---------------Сетка для шапки---------------*/
-.page-title {
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
+	outline: 3px solid yellow;
 }
+
+.template-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0;
+	margin-bottom: 27px;
+	padding: 0;
+	list-style: none;
+}
+
+.catalog-item	{
+	width: 360px;
+	margin: 0;
+	margin-bottom: 33px;
+	padding: 0;
+	outline: 3px solid orange;
+}
+
+.pagination-list {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	margin-bottom: 60px;
+	padding: 0;
+	outline: 3px solid black;
+}
+
+
