@@ -27,10 +27,9 @@ img {
 	box-sizing: inherit;
 }
 
-/*--------------- Main-navigation-style ---------------*/
+/*--------------- Главная навигация-СТИЛИ ---------------*/
 .main-header {
 	background-color: #eeeeee;
-
 }
 
 .main-navigation {
@@ -64,14 +63,13 @@ img {
 }
 
 
-/*--------------- Slider-style ---------------*/
+/*--------------- Слайдеры-СТИЛИ ---------------*/
 .sliders {
 	background-color: #eeeeee;
 }
 
 .sliders-list {
 	list-style: none;
-
 	text-align: left;
 }
 
@@ -82,12 +80,10 @@ img {
 
 .sliders-list a {
 	text-decoration: none;
-
 	font-size: 16px;
 	line-height: 18px;
 	color: #ffffff;
 	text-transform: uppercase;
-
 	background-color: #fb565a;
 }
 
@@ -102,7 +98,7 @@ img {
 }
 
 
-/*--------------- Services-style ---------------*/
+/*--------------- Услуги-СТИЛИ ---------------*/
 .services-list {
 	list-style: none;
 }
@@ -162,22 +158,20 @@ img {
 }
 
 
-/*--------------- About-style-left ---------------*/
-.about {
-	text-align: left;	
-}
-
+/*--------------- О студии-СТИЛИ-левая сторона ---------------*/
 .slogan {
+	color: #000000;
 	font-size: 45px;
 	line-height: 45px;
 }
 
 .about h4 {
+	color: #000000;
 	text-transform: uppercase;
 }
 
 
-/*--------------- About-style-right ---------------*/
+/*--------------- О студии-СТИЛИ-правая сторона ---------------*/
 .statistics {
 	list-style: none;
 }
@@ -194,7 +188,7 @@ img {
 }
 
 .statistics .percent {
-	font-size: 20px; /* запутался, не могу сообразить как правильно сделать */
+	font-size: 20px; 
 	vertical-align: super;
 
 	margin-top: -13px;
@@ -207,7 +201,7 @@ img {
 }
 
 
-/*--------------- Partners-style ---------------*/
+/*--------------- Партнеры-СТИЛИ ---------------*/
 .partners-list {
 	list-style: none;
 }
@@ -225,7 +219,7 @@ img {
 	opacity: 0.1;
 }
 
-/*--------------- Footer-style ---------------*/
+/*--------------- Футер-СТИЛИ ---------------*/
 .contacts h4 {
 	font-size: 18px;
 	line-height: 30px;
@@ -252,7 +246,7 @@ img {
 
 .footer-discount b {
 	font-size: 36px;
-	list-style: 36px;
+	line-height: 36px;
 	font-weight: bold;
 }
 
@@ -263,7 +257,7 @@ img {
 }
 
 
-/*--------------- Feedback-style ---------------*/
+/*--------------- Обратная связь-СТИЛИ ---------------*/
 .feedback input {
 	font: inherit;
 }
@@ -310,7 +304,7 @@ img {
 
 
 
-/*--------------- CATALOG ---------------*/
+/*--------------- КАТАЛОГ-СТИЛИ ---------------*/
 .filters ul {
 	list-style: none;
 }
@@ -324,7 +318,7 @@ img {
 }
 
 
-/*--------------- Filters-style ---------------*/
+/*--------------- Фильтры-СТИЛИ ---------------*/
 .filter fieldset {
 	border: none;
 }
@@ -376,7 +370,7 @@ img {
 
 	background-color: #eeeeee;
 }
-/*---------------Sort-style ---------------*/
+/*---------------Сортировка-СТИЛИ ---------------*/
 .sort h2 {
 	font-size: 18px;
 	line-height: 18px;
@@ -396,12 +390,10 @@ img {
 }
 
 .sort-list li {
-		font-size: 14px;
-		line-height: 18px;
-		text-transform: uppercase;
-
-
-		color: #000000;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: #000000;
 }
 
 .sort-type,
@@ -420,14 +412,12 @@ img {
 	line-height: 30px;
 	font-weight: bold;
 	text-transform: uppercase;
-
 	color: #000000
 }
 
 .about {
 	font-size: 16px;
 	line-height: 18px;
-
 	color: #666666;
 }
 
@@ -456,7 +446,6 @@ img {
 	font-size: 16px;
 	line-height: 18px;	
 	color: #eeeeee;
-
 	text-transform: uppercase;
 }
 
@@ -464,11 +453,9 @@ img {
 /*---------------Ссылки на страницы (каталог) ---------------*/
 .pagination-list {
 	list-style: none;
-
 	font-size: 14px;
 	line-height: 18px;
 	color: #000000;
-
 	text-transform: uppercase;
 }
 
@@ -484,13 +471,12 @@ img {
 .pagination-item a:active {
 	color: #000000;
 	opacity: 0.3;
-	
 	background-color: #d5d5d5;
 }
 
 
 
-/*---------------Сеточные стили ---------------*/
+/*---------------СЕТОЧНЫЕ СТИЛИ ---------------*/
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -498,21 +484,20 @@ img {
 	clip: rect(0,0,0,0);
 }
 
-/*Главная*/
+/*ГЛАВНАЯ*/
 /*---------------Сетка для навигации---------------*/
 .main-header {
 	background-color: #eeeeee;	
-	width: 100%; /* Задал в прцоентах так как при размере 1440 слишком большое окно */
 	margin: 0;
 	padding: 0;
 }
 
 .main-navigation {
 	display: flex;
-	justify-content: space-around;
-	margin: 0;
+	justify-content: space-between;
+	width: 1200px;
+	margin: 0 auto;
 	padding: 0;
-
 	outline: 3px solid green;
 }
 
@@ -521,106 +506,178 @@ img {
 	height: 65px;
 	margin: 0;
 	padding: 0;
-
 	outline: 3px solid yellow;
 }
 
 .site-navigation {
-	width: 440px;
 	display: flex;
-	justify-content: space-between;
 	margin: 0;
 	padding: 0;
-
 	outline: 3px solid orange;
 }
 
+.site-navigation li {
+	padding: 0 30px;
+}
+
+.basket-link,
 .basket-link a {
 	margin: 0;
-	padding: 0;
-
+	padding: 0; 
 	outline: 3px solid black;
 }
 
 
-/*Слайдер */ 
+/*---------------Сетка для слайдера---------------*/
+.sliders-list {
+	display: fle; /*чтобы не было каши */
+	width: 1200px;
+	padding: 0;
+	margin: 0 auto;
+}
 
+.slider-colums {
+	display: flex;
+	flex-direction: row-reverse;
+	width: 1200px;
+	padding: 0;
+	margin: 0 auto;
+	outline: 3px solid red;
+}
+ 
+.slider-left {
+	width: 34%;
+	margin: 0;
+	padding: 0;
+	outline: 3px solid orange;
+}
+
+.slider-right {
+	width: 66px;
+	margin: 0;
+	padding: 0;
+}
 
 /*---------------Сетка для услуг---------------*/
 .services-list {
 	display: flex;
+	width: 1200px;
 
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
-	outline: 3px solid black;
+	outline: 3px solid red;
 }
 
 .service-item {
-	width: 303px;
-}
-
-.services {
-	margin-bottom: 70px;
-}
-
-.index-colums {
-	display: flex;
-	justify-content: space-between;
-	padding: 0;
+	width: 33%;
 	margin: 0;
+	padding: 0;
+	padding-right: 100px;
 }
+
+.service-item p {
+	width: 245px;
+}
+
 
 
 /*---------------Сетка для описания---------------*/
-.about {
-	width: 663px;
-	min-height: 372px;
+.about-colums {
+	display: flex;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+}
 
-	margin-left: 120px;
+.about {
+	width: 66%;
+	margin: 0;
+	padding: 0;
 	outline: 3px solid orange;
 }
 
 .block2004 {
-	width: 360px;
-	min-height: 411px;
-	margin-right: 120px;
+	width: 34%;
+	margin: 0;
+	padding: 0;
 	outline: 3px solid blue;
 }
 
 .block2004 .statistics {
 	display: flex;
-}
-
-.partners-section {
-	margin: 0;
+	 margin: 0;
 	padding: 0;
+} 
+
+
+/*---------------Сетка для партнеров---------------*/
+.partners-section {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+ 	outline: 3px solid purple;
 }
 
 .partners-list {
 	display: flex;
-	justify-content: space-around;
- 	outline: 3px solid purple;
+	width: 1200px;
+	margin: 0;
+	padding: 0;
+}
+
+.partners-list li {
+	width: 25%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
 }
 
 
 /*---------------Сетка для футера---------------*/
+.main-footer {
+	width: 1200px; /*Тут мы задали ширину блока */
+	margin: 0 auto;
+	padding: 0;
+ 	outline: 3px solid red;
+}
+
+.footer-colums {
+	display: flex;
+	width: 1200px;  /*надо ли тут ширину дублировать!? */
+	margin: 0;
+	padding: 0;
+}
 
 .contacts {
 	display: block;
 	outline: 3px solid yellow;
 }
 
-.footer-colums {
-	display: flex;
-	justify-content: space-around;
+.footer-social {
+	width: 34%;
+	margin: 0;
+	padding: 0;
+	outline: 3px solid purple;
 }
 
 .social-type {
 	display: flex;
-	justify-content: space-between;
-	width: 260px;	
+	margin: 0;
+	padding: 0;
+	outline: 3px solid black;
 }
 
+.footer-discount {
+	width: 66%;
+	margin: 0;
+	padding: 0;
+	outline: 3px solid blue;
+}
+
+.footer-discount b,p {
+	margin: 0;
+	padding: 0;
+}
 
 /*Каталог*/
 /*---------------Сетка для фильтров---------------*/
@@ -655,4 +712,12 @@ img {
 
 .catalog-columns {
 	display: flex;
+}
+
+
+/*КАТАЛОГ*/
+/*---------------Сетка для шапки---------------*/
+.page-title {
+	margin: 0 auto;
+	padding: 0;
 }
