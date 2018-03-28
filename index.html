@@ -21,12 +21,12 @@
 					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
 				<ul class="basket-link">
-					<li><a href="#">Корзина</a></li> 
+					<li><a class="basket" href="#">Корзина</a></li> 
 				</ul>
 			</nav>
 		</header>
 		<main class="container">
-			<h1 class="visually-hidden">Cтудия дизайна Nerds</h1>
+			<h1 class="visually-hidden">Cтудия дизайна Nerds</h1>	
 			<section class="sliders">
 				<h2 class="visually-hidden">Слайдер</h2>
 				<ul class="sliders-list">
@@ -37,7 +37,7 @@
 						<div class="slider-left">
 							<h3>Долго, дорого, скрупулезно</h3>
 							<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-							<a href="#">Узнать больше</a>
+							<a class="button button-slider" href="#">Узнать больше</a>
 						</div>
 					</li>
 					<li class="slider-colums slider2">
@@ -47,10 +47,9 @@
 						<div class="slider-left">	
 							<h3>Любим математику как никто другой</h3>
 							<p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-							<a href="catalog.html">Узнать больше</a>
+							<a class="button button-slider" href="catalog.html">Узнать больше</a>
 						</div>
 					</li>
-
 					<li class="slider-colums slider3">
 						<div class="slider-img">
 							<img src="img/slide3.png" width="698" height="413" alt="Планшет и телефон">
@@ -58,7 +57,7 @@
 						<div class="slider-left">
 							<h3>Только ночь, только хардкор</h3>
 							<p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-							<a href="catalog.html">Узнать больше</a>
+							<a class="button button-slider" href="catalog.html">Узнать больше</a>
 						</div>
 					</li>
 				</ul>
@@ -70,19 +69,19 @@
 						<img src="img/web-site.png" width="300" height="146" alt="Веб-Сайты">
 						<h3>Веб-сайты</h3>
 						<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-						<a href="catalog.html">Заказать</a>
+						<a class="button button-services" href="catalog.html">Заказать</a>
 					</li>
 					<li class="aps service-item">
 						<img src="img/apps.png" width="300" height="146" alt="Приложения">
 						<h3>Приложения</h3>
 						<p>Покорите топ-10 приложений в AppStore и Google Play</p>
-						<a href="catalog.html">Заказать</a>
+						<a class="button button-services" href="catalog.html">Заказать</a>
 					</li>
 					<li class="presentation service-item">
 						<img src="img/presentation.png" width="300" height="146" alt="Презентации">
 						<h3>Презентации</h3>
 						<p>Вы даже не подозреваете, насколько вы изумительны!</p>
-						<a href="catalog.html">Заказать</a>
+						<a class="button button-services" href="catalog.html">Заказать</a>
 					</li>
 				</ul>
 			</section> 
@@ -90,7 +89,7 @@
 				<section class="about">
 					<h2 class="visually-hidden">О студии</h2> 		
 					<p class="slogan"><b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b></p>
-					<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+					<p class="slogan2">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
 					<h4>Выполняем заказы на разработку:</h4>
 					<ul class="orders">
 						<li>Веб-сайтов любой сложности</li>
@@ -120,22 +119,22 @@
 			<section class="partners-section">
 				<h2 class="visually-hidden">Работы</h2>
 				<ul class="partners-list">
-					<li>
+					<li class="partners-item">
 						<a href="https://htmlacademy.ru/intensive/htmlcss">
 							<img src="img/logo-academy.png" width="199" height="68" alt="HTML Academy">
 						</a>
 					</li>
-					<li>
+					<li class="partners-item">
 						<a href="borodinski.html">
 							<img src="img/logo-barbershop.png" width="209" height="90" alt="Барбершоп">
 						</a>
 					</li>
-					<li>
+					<li class="partners-item">
 						<a href="pink.html">
 							<img src="img/logo-pink.png" width="185" height="52" alt="PINK">
 						</a>
 					</li>
-					<li>
+					<li class="partners-item">
 						<a href="mishka.html">
 							<img src="img/logo-mishka.png" width="173" height="84" alt="MISHKA">
 						</a>
@@ -154,23 +153,35 @@
 				<p>191186, Санкт-Петербург,<br>
 				ул. Конюшенная, д. 19/8</p>
 				<p>тел. +7(812)275-75-75</p>
-				<a class="button-letter" href="#">Напишите нам</a>
+				<a class="button button-letter" href="#">Напишите нам</a>
 			</div>
 			<div class="footer-colums">
 				<div class="footer-social">
 					<ul class="social-type">
-						<li class="button-vk"><a href="#">Вконтакте</a></li>
-						<li class="button-facebook"><a href="#">Фейсбук</a></li>
-						<li class="button-instagram"><a href="#">Инстаграм</a></li>
+						<li>
+							<a class="button-social" href="#">
+								<img class="button-vk" src="img/vk-icon.svg" alt="Вконтакте" width="26" height="15">
+							</a>
+						</li>
+						<li>
+							<a class="button-social" href="#">
+								<img class="button-facebook" src="img/fb-icon.svg" alt="Фейсбук" width="12" height="22">
+							</a>
+						</li>
+						<li>
+							<a class="button-social" href="#">
+								<img class="button-instagram" src="img/insta-icon.svg" alt="Инстаграм" width="21" height="21">
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div class="footer-discount">
-					<b>Давайте дружить, это выгодно</b>
-					<p>Скидка 10% для друзей из социальных сетей</p>
+					<b>Давайте дружить, это выгодно!</b>
+					<p>Скидка 10% для друзей из социальных сетей.</p>
 				</div>
 			</div>
 		</footer>
-		<section class="feedback">
+		<section class="feedback visually-hidden">
 			<form class="letter" action="https://echo.htmlacademy.ru" method="post">
 				<h3>Напишите нам</h3>
 				<p>
