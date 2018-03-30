@@ -30,63 +30,72 @@
 			<div class="catalog-columns">
 				<section class="filters">
 					<h2 class="visually-hidden">Фильтры товаров</h2>
-					<form class="filter" method="get" action="https://echo.htmlacademy">				
+					<form class="filter" method="get" action="https://echo.htmlacademy">		
 						<div class="filter-columns">
-							<fieldset class="cost-section">
+							
+							
+							<fieldset class="filter-item-cost">
 								<legend>Стоимость:</legend>
-								<button class="cost-button-min" type="button">Минимальная цена</button>
-								<button class="cost-button-max" type="button">Максимальная цена</button>
-								<p class="cost-field">
-									<label>
-										От <input type="text" name="from" value="0">
-									</label>
-									<label>
-										До <input type="text" name="until" value="15 000">
-									</label>
-								</p>
+								<div class="range-filter">
+									<div class="range-controls">
+										<div class="scale">
+											<div class="bar"></div>
+										</div>
+										<div class="toggle toggle-min"></div>
+										<div class="toggle toggle-max"></div>
+									</div>
+									<div class="price-controls">
+										<label class="min-price">от <input name="min-price" type="text" value="0"></label>
+            							<label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+									</div>
+								</div>
 							</fieldset>
-							<fieldset class="grid-section">
+
+
+							<fieldset class="filter-item-grid">
 								<legend>Сетка:</legend>
 								<ul>
-									<li class="filter-option">
-										<input class="visually-hidden filter-input filter-input-checked" type="radio" name="grid" value="adaptive" id="filter-adapt" checked>
+									<li class="option-grid filter-option">
+										<input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="adaptive" id="filter-adapt" checked>
 										<label for="filter-adapt">Адаптиваная</label>
 									</li>
-									<li class="filter-option">
-										<input class="visually-hidden filter-input" type="radio" name="grid" value="fixed" id="filter-fixed">
+									<li class="option-grid filter-option">
+										<input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="fixed" id="filter-fixed">
 										<label for="filter-fixed">Фиксировання</label>
 									</li>
-									<li class="filter-option">
-										<input class="visually-hidden filter-input" type="radio" name="grid" value="rubber" id="filter-rubber">
+									<li class="option-grid filter-option">
+										<input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="rubber" id="filter-rubber">
 										<label for="filter-rubber">Резиновая</label>
 									</li>
 								</ul>
 							</fieldset>
-							<fieldset class="features-section">
+							
+							<fieldset class="filter-item-features">
 								<legend>Особенности:</legend>
 								<ul>
-									<li class="filter-option">
-										<input class="visually-hidden filter-input filter-input-checked" type="checkbox" name="slider" id="filter-slider" checked>
+									<li class="option-features filter-option">
+										<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
 										<label for="filter-slider">Слайдер</label>
 									</li>
-									<li class="filter-option">
-										<input class="visually-hidden filter-input" type="checkbox" name="block" id="filter-block">
+									<li class="option-features filter-option">
+										<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="block" id="filter-block">
 										<label for="filter-block">Блок преимуществ</label>
 									</li>
-									<li class="filter-option">
-										<input class="visually-hidden filter-input filter-input-checked" type="checkbox" name="news" id="filter-news" checked>
+									<li class="option-features filter-option">
+										<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
 										<label for="filter-news">Новости</label>					
 									</li>
-									<li class="filter-option">
-										<input class="visually-hidden filter-input" type="checkbox" name="gallery" id="filter-gallery">
+									<li class="option-features filter-option">
+										<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
 										<label for="filter-gallery">Галерея</label>
 									</li>
-									<li class="filter-option">
-										<input class="visually-hidden filter-input" type="checkbox" name="basket" id="filter-basket">
+									<li class="option-features filter-option">
+										<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="basket" id="filter-basket">
 										<label for="filter-basket">Корзина</label>
 									</li>						
 								</ul>
 							</fieldset>
+
 							<button type="submit" class="filter-button">Показать</button>
 						</div>
 					</form>	
@@ -101,24 +110,28 @@
 									<li class="sort-name"><a href="#">По названию</a></li> 
 								</ul>
 								<ul class="sort-kind">
-									<li class="sort-down"><a href="#">По убыванию</a></li>
-									<li class="sort-up-current"><a>По возрастанию</a></li>
+									<li class="sort-down"><a href="#"></a></li>
+									<li class="sort-up-current"><a></a></li>
 								</ul>
 						</div>
 					</div>					
 					<h2 class="visually-hidden">Каталог шаблонов</h2>
 					<ul class="template-list">
-						<li class="sedona-item catalog-item">
-							<h4><a href="#">Sedona</a></h4>
-							<p class="about-catalog">Информационный сайт<br>
-							для туристов</p>
-							<p class="image">
-								<img src="img/sedona-template.jpg" width="360" height="576" alt="Шаблон Седона">
-							</p> 
-							<p class="button-orders"> 
-								<button class="btn-order button-order1" type="button">9 900 <span>руб.</span></button>
-							</p>
-						</li>
+						
+							<li class="sedona-item catalog-item">
+								<p class="sedona-image">
+									<img src="img/sedona-template.jpg" width="360" height="576" alt="Шаблон Седона">
+								</p> 
+								<div class="about-sedona about-item">
+									<h4><a href="#">Sedona</a></h4>
+									<p>Информационный сайт<br>
+									для туристов</p>
+									<p class="button-orders"> 
+										<button class="btn-order button-order1" type="button">9 900 <span>руб.</span></button>
+									</p>
+								</div>	
+							</li>
+
 						<li class="pink-item catalog-item">
 							<h4><a href="#">Pink app</a></h4>
 							<p class="about-catalog">Продуктовый лендинг<br>
@@ -175,10 +188,10 @@
 					</ul>
 					<h2 class="visually-hidden">Ссылки на сраницы</h2>
 					<ul class="pagination-list">
-						<li class="pagination-item-current"><a>1</a></li>
-						<li class="pagination-item"><a href="#">2</a></li>
-						<li class="pagination-item"><a href="#">3</a></li>
-						<li class="pagination-item"><a href="#">Следующая</a></li>
+						<li class="pagination-item-current pagination"><a>1</a></li>
+						<li class="pagination-item pagination"><a href="#">2</a></li>
+						<li class="pagination-item pagination"><a href="#">3</a></li>
+						<li class="pagination-item-next pagination"><a href="#">Следующая</a></li>
 					</ul>
 				</section>
 			</div>	
