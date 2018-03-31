@@ -5,15 +5,14 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	min-width: 1200xp;
 
 	font-family: Roboto, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: normal;
 	color: #000000;
-
 	background-color: #ffffff;
+	overflow-x: hidden;
 } 
 
 a {
@@ -50,7 +49,7 @@ input [type="radio"].visually-hidden {
 	color: #ffffff;
 	vertical-align: center;
 	text-transform: uppercase;
-	border-radius: 2px;
+	border-radius: 5px;
 
 	background-color: #fb565a;
 	border: none;
@@ -58,16 +57,58 @@ input [type="radio"].visually-hidden {
 
 
 /*--------------- Главная навигация-СТИЛИ ---------------*/
+.container {
+	margin: 0 auto;
+	padding: 0;
+}
+
 .main-header {
+	margin: 0 auto;
+	padding: 0;
 	background-color: #eeeeee;
 }
 
+.main-header-logo {
+	width: 160px;
+	height: 65px;
+	margin: 0;
+	padding: 48px 200px 20px 20px;
+}
+
+.main-header-logo img:focus,
+.main-header-logo img:hover {
+	opacity: 0.8;
+}
+
+.main-header-logo img:active {
+	opacity: 0.3;
+}
+
 .main-navigation {
+	display: flex;
+	justify-content: space-between;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
 	font-size: 16px;
 	line-height: 30px;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #000000;
+}
+
+.site-navigation {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+}
+
+.site-navigation li {
+	padding: 0;
+	padding-top: 73px;
+	padding-right: 45px;
 }
 
 .site-navigation,
@@ -77,7 +118,36 @@ input [type="radio"].visually-hidden {
 
 .site-navigation a,
 .basket-link a {
+	text-decoration: none;
 	color: #000000;
+}
+
+.basket-link {
+	display: flex;
+	max-width: 130px;
+	margin: 0;
+	padding: 0;
+	padding-top: 83px;
+}
+
+.basket-link .basket {
+	position: relative;
+	padding-left: 45px;
+}
+
+.basket::before {
+	content: "";
+
+	position: absolute;
+	top: 1px;
+	left: 20px;
+
+	width: 16px;
+	height: 16px;
+
+	background-image: url("../img/cart-icon.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 .site-navigation a:hover,
@@ -90,23 +160,64 @@ input [type="radio"].visually-hidden {
 .site-navigation a:active,
 .basket-link a:active {
 	color: #000000;
-	opacity: 0.2;
+	opacity: 0.3;
 }
 
+.site-navigation-current a {
+	border-bottom: 2px solid #fb565a;
+}
 
 /*--------------- Слайдеры-СТИЛИ ---------------*/
 .sliders {
+	margin: 0;
+	margin-bottom: 80px;
+	padding: 0;
 	background-color: #eeeeee;
+}
+
+.slider-colums {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	width: 1200px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.slider-left {
+	width: 44%;
+	margin: 0;
+	padding: 0;
+}
+
+.slider-img {
+	margin: 0;
+	padding: 0;
 }
 
 .sliders-list {
 	list-style: none;
 	text-align: left;
+	display: flex;
+	width: 1200px;
+	padding: 0;
+	margin: 0 auto;
 }
 
 .sliders-list h3 {
 	font-size: 55px;
 	line-height: 55px;
+	padding: 0;
+	padding-top: 65px;
+	margin: 0;
+}
+
+.slider-left p {
+	font-size: 16px;
+	line-height: 24px;
+	width: 460px;
+	margin: 0;
+	padding: 28px 0 42px 0; 
 }
 
 .sliders-list a {
@@ -118,23 +229,34 @@ input [type="radio"].visually-hidden {
 	background-color: #fb565a;
 }
 
+.button-slider {
+	display: inline-block;
+	padding: 17px 55px;
+} 
+
 .sliders-list a:hover,
 .sliders-list a:focus,
 .basket-link a:focus,
 .basket-link a:hover {
-	color: white;
 	background-color: #e74246;
 }
 
 .sliders-list a:active,
 .basket-link a:active {
-	background-color: #d7373b;
+	color: rgba(255, 255, 255, 0.3);
+	box-shadow: 0 3px inset;
+	background-color: #c13135;
 }
 
-
+	
 
 /*--------------- Услуги-СТИЛИ ---------------*/
 .services-list {
+	display: flex;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	border-bottom: 2px solid #e1e1e1;
 	list-style: none;
 }
 
@@ -152,6 +274,27 @@ input [type="radio"].visually-hidden {
 	line-height: 18px;
 	color: white;
 	text-transform: uppercase;
+}
+
+.service-item {
+	width: 33%;
+	margin: 0;
+	margin-right: 100px;
+	margin-bottom: 80px;
+	padding: 0;
+	border: 3px solid purple;
+}
+
+.service-item p {
+	width: 245px;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 35px;
+}
+
+.service-item h3 {
+	margin: 0;
+	padding: 26px 0;
 }
 
 .web-site a {
@@ -172,7 +315,9 @@ input [type="radio"].visually-hidden {
 }
 
 .services-list .web-site a:active {
-	background-color: #d7373b;
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #c13135;
+	box-shadow: 0 3px inset;
 }
 
 .services-list .aps a:hover,
@@ -181,7 +326,9 @@ input [type="radio"].visually-hidden {
 }
 
 .services-list .aps a:active {
+	color: rgba(255, 255, 255, 0.3);
 	background-color: #00aa62;
+	box-shadow: 0 3px inset;
 }
 
 .services-list .presentation a:hover,
@@ -190,31 +337,101 @@ input [type="radio"].visually-hidden {
 }
 
 .services-list .presentation a:active {
+	color: rgba(255, 255, 255, 0.3);
 	background-color: #e5a722;
+	box-shadow: 0 3px inset;
+}
+
+
+
+/*--------------- О студии-СТИЛИ ---------------*/
+.about-colums {
+	display: flex;
+	justify-content: space-between;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	border-bottom: 2px solid #e1e1e1;
 }
 
 
 /*--------------- О студии-СТИЛИ-левая сторона ---------------*/
+.about {
+	width: 58.3333%;
+	margin: 80px 0 75px 0;
+	padding: 0;
+	outline: 3px solid orange;
+}
+
 .slogan {
 	color: #000000;
 	font-size: 45px;
 	line-height: 45px;
 }
 
+.slogan2 {
+	margin: 0;
+	padding: 38px 0 48px 0;
+}
+
 .about h4 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 35px;
 	color: #000000;
 	text-transform: uppercase;
 }
 
+.orders li {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 35px;
+}
+
+.orders li:nth-child(3) {
+	margin: 0;
+	padding: 0;
+}
+
+.orders li {
+	display: block;
+	position: relative;
+}
+
+.orders li::before {
+	position: absolute;
+	left:-40px;
+	display: block;
+	content: "\2014";
+	font-size: 40px;
+	color: #fb565a;
+}
+
 
 /*--------------- О студии-СТИЛИ-правая сторона ---------------*/
+.block2004 {
+	width: 33.3333%;
+	margin: 40px 0 75px 0;
+	padding: 0;
+	outline: 3px solid blue;
+}
+
 .statistics {
 	list-style: none;
 }
 
 .block2004 h4 {
+	margin: 0;
+	padding: 41px 0 45px 0;
+	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+.block2004 .statistics {
+	display: flex;
+	margin: 0;
+	padding: 0;
 }
 
 .statistics .number {
@@ -236,8 +453,39 @@ input [type="radio"].visually-hidden {
 	line-height: 18px;
 }
 
+.tagging {
+	display: block;
+	margin: 0;
+	padding: 0;	
+	padding-top: 28px;
+}
 
-/*--------------- Партнеры-СТИЛИ ---------------*/
+
+
+/*--------------- Партнеры-Стили ---------------*/
+.partners-section {
+	width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 80px;
+	padding: 0;
+	outline: 3px solid red;
+}
+
+.partners-list {
+	display: flex;
+	align-items: center;
+	width: 1200px;
+	margin: 0;
+	padding: 0;
+}
+
+.partners-list li {
+	width: 25%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
 .partners-list {
 	list-style: none;
 }
@@ -255,8 +503,6 @@ input [type="radio"].visually-hidden {
 	opacity: 0.1;
 }
 
-
-
 .partners-item {
 	position: relative;
 }
@@ -265,7 +511,8 @@ input [type="radio"].visually-hidden {
 	content: "";
 
 	position: absolute;
-	top: 25px;
+	top: 50%;
+	margin-top: -26px;
 	left: 0px;
 
 	width: 2px;
@@ -281,9 +528,32 @@ input [type="radio"].visually-hidden {
 
 
 
-
 /*--------------- Футер-СТИЛИ ---------------*/
+.main-footer {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.map { 
+	margin-left: -500px;
+	margin-right: -500px;
+	text-align: center;
+	outline: 3px solid red;
+}
+
+.contacts {
+	position: absolute;
+	width: 219px;
+	height: 308px;
+	margin-top: -400px;
+	padding: 0 50px;
+	background-color: #ffffff;
+}
+
 .contacts h4 {
+	margin: 50px 0 30px 0;
+	padding: 0;
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: bold;
@@ -295,91 +565,120 @@ input [type="radio"].visually-hidden {
 	color: #61686c;
 }
 
-.contacts a {
-	font-size: 18px;
-	line-height: 30px;
-	text-transform: uppercase;
-	color: white;
-	background-color: #fb565a;
+.contacts p:last-of-type {
+	margin: 0;
+	padding: 10px 0 35px 0;
 }
 
-.footer-social ul {
+.button-letter {
+	display: block;
+	padding: 17px 45px;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	font-weight: normal;
+	color: #ffffff;
+	vertical-align: center;
+	text-transform: uppercase;
+	border-radius: 5px;
+	background-color: #fb565a;
+	border: none;  /* неправильно отображается */
+}
+
+.button-letter:hover,
+.button-letter:focus {
+	background-color: #e74246;
+}
+
+.button-letter:active {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #d7373b;
+	box-shadow: 0 3px inset;
+}
+
+
+/*--------------- Футер-Подвал-СТИЛИ ---------------*/
+.footer-colums {
+	display: flex;
+	width: 1200px;  /*надо ли тут ширину дублировать!? */
+	margin: 69px 0 0 0;
+	padding: 0;
+	outline: 3px solid blue;	
+}
+
+.social-type {
+	display: flex;
+	justify-content: space-between;
+	width: 260px;
+	margin: 0px 140px 0 0;
+	padding: 0;
 	list-style: none;
 }
 
+.button-social {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+
+	width: 80px;
+	height: 80px;
+	border-radius: 100px;
+	background-color: #e1e1e1;
+}
+
+.button-social:hover,
+.button-social:focus {
+	background-color: #e74246;
+}
+
+.button-social:active {
+	background-color: #d7373b;
+	box-shadow: 0 3px rgba(0, 0, 0, 0.3) inset;
+}
+
+.button-social:active img {
+	opacity: 0.3
+}
+
+.footer-discount {
+	width: 66%;
+	margin: 0;
+	padding: 0;
+}
+
 .footer-discount b {
+	display: block;
+	padding: 9px 0 15px 0;
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: bold;
 }
 
 .footer-discount p {
+	margin: 0;
+	padding: 0;
 	font-size: 16px;
 	list-style: 22px;
 	color: #444444;
 }
 
 
-/*--------------- Обратная связь-СТИЛИ ---------------*/
-.feedback input {
-	font: inherit;
-}
 
-.letter h3 {
-	font-size: 45px;
-	list-style: 45px;
-}
 
-.letter label {
-	font-size: 16px;
-	line-height: 18px;
-	font-weight: bold;
-}
-
-.letter input,
-.letter textarea {
-	font-size: 16px;
-	line-height: 18px;
-	color: #000000;
-	opacity: 0.5;
-
-	background-color: #ffffff;
-	border: 2px solid #d7dcde;
-}
-
-.letter input:hover,
-.letter textarea:hover {
-	border-color: #b4b9bb;
-}
-
-.letter input:focus,
-.letter textarea:focus {
-	border-color: #000000;
-}
-
-.button {
-	font-size: 16px;
-	line-height: 18px;
-	color: white;
-	background-color: #fb565a;
-	text-transform: uppercase;
-}
 
 
 
 /*--------------- Каталог-СТИЛИ ---------------*/
-
 .page-title {
-	width: 1200px;
-	margin: 0 auto;
-	padding: 0;
-	padding-bottom: 116px;
+	margin: 0 -2000px;
+	padding: 65px 0 115px 0;
 	font-size: 55px;
 	line-height: 55px;
 
 	background-color: #eeeeee;
 	text-align: center;
 }
+
 
 
 /*--------------- Фильтры-СТИЛИ ---------------*/
@@ -389,8 +688,80 @@ input [type="radio"].visually-hidden {
 	margin: 0 120px 0 0;
 }
 
+/*--------------- Фильтр-Сетка-СТИЛИ ---------------*/
+.filter-item-grid {
+	margin: 0 0 50px 0;
+	padding: 0;
+	border: none;
+}
 
-/*--------------- Фильтры-Стоимость-СТИЛИ ---------------*/
+.filter-item-grid legend {
+	margin: 0 0 20px 0;
+	padding: 0;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.filter-item-grid ul {
+	font-size: 16px;
+	line-height: 20px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #dfdfdf;
+}
+
+.option-grid {
+	margin-bottom: 15px;
+	padding-left: 35px; 
+}
+
+.option-grid label {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	user-select: none;
+}
+
+.filter-input-radio + label::before {
+	content: "";
+
+	position: absolute;
+	left: -35px;
+	top: -2px;
+
+	width: 27px;
+	height: 27px;
+
+	background-image: url("../img/radio-off.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	color: #dfdfdf;
+	opacity: 0.4;
+}
+
+.filter-input-radio:checked + label::after {
+	content: "";
+
+	position: absolute;
+	left: -35px;
+	top: -2px;
+
+	width: 27px;
+	height: 27px;
+
+	background-image: url("../img/radio-on.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	color: #dfdfdf;
+	opacity: 0.4;
+}
+
+
+
+/*--------------- Фильтр-Стоимость-СТИЛИ ---------------*/
 .filter-item-cost {
 	margin: 60px 0 60px 0;
 	padding: 0;
@@ -494,80 +865,6 @@ input [type="radio"].visually-hidden {
 }
 
 
-
-/*--------------- Фильтр-Сетка-СТИЛИ ---------------*/
-.filter-item-grid {
-	margin: 0 0 50px 0;
-	padding: 0;
-	border: none;
-}
-
-.filter-item-grid legend {
-	margin: 0 0 20px 0;
-	padding: 0;
-	font-size: 18px;
-	line-height: 30px;
-	text-transform: uppercase;
-	font-weight: bold;
-}
-
-.filter-item-grid ul {
-	font-size: 16px;
-	line-height: 20px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	color: #dfdfdf;
-}
-
-.option-grid {
-	margin-bottom: 15px;
-	padding-left: 35px; 
-}
-
-.option-grid label {
-	position: relative;
-	display: block;
-	cursor: pointer;
-	user-select: none;
-}
-
-.filter-input-radio + label::before {
-	content: "";
-
-	position: absolute;
-	left: -35px;
-	top: -2px;
-
-	width: 27px;
-	height: 27px;
-
-	background-image: url("../img/radio-off.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	color: #dfdfdf;
-	opacity: 0.4;
-}
-
-.filter-input-radio:checked + label::after {
-	content: "";
-
-	position: absolute;
-	left: -35px;
-	top: -2px;
-
-	width: 27px;
-	height: 27px;
-
-	background-image: url("../img/radio-on.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	color: #dfdfdf;
-	opacity: 0.4;
-}
-
-
-
 /*--------------- Фильтр-Особенности-СТИЛИ ---------------*/
 .filter-item-features {
 	margin: 0 0 30px 0;
@@ -584,13 +881,22 @@ input [type="radio"].visually-hidden {
 	font-weight: bold;
 }
 
+.filter-item-grid ul {
+	font-size: 16px;
+	line-height: 20px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #283136;
+}
+
 .filter-item-features ul {
 	font-size: 16px;
 	line-height: 20px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	color: #dfdfdf;
+	color: #283136;
 }
 
 .option-features {
@@ -638,6 +944,7 @@ input [type="radio"].visually-hidden {
 }
 
 
+
 /*--------------- Фильтр-Кнопка-СТИЛИ ---------------*/
 .filter-button {
 	display: inline-block;
@@ -653,25 +960,20 @@ input [type="radio"].visually-hidden {
 	color: #000000;
 	vertical-align: center;
 	text-transform: uppercase;
-	border-radius: 2px;
+	border-radius: 5px;
 
 	background-color: #eeeeee;
 	border: none;
 }
 
 
+
 /*--------------- Эффекты-псевдоэлементов-Каталог ---------------*/
 .filter-input:hover + label, 
 .filter-input:focus + label {
 	color: #000000;
-	opacity: 1; /* не работает маркер */
+	opacity: 1;	/*не разобрался */
 }
-
-.filter-input:active + label { 
-	color: #000000;
-	opacity: 0.3;
-}
-
 
 
 .filter-button:hover,
@@ -680,10 +982,10 @@ input [type="radio"].visually-hidden {
 }
 
 .filter-button:active {
+	box-shadow: 0 3px inset;
 	color: rgba(0, 0, 0, 0.3);
 	background-color: #d5d5d5;
 }
-
 
 
 
@@ -744,11 +1046,6 @@ input [type="radio"].visually-hidden {
 	padding: 0;
 }
 
-.sort-type,
-.sort-name {
-	opacity: 0.3;
-}
-
 .sort-kind {
 	width: 45px;
 	min-height: 18px;
@@ -760,7 +1057,6 @@ input [type="radio"].visually-hidden {
 	width: 12px;
 	height: 11px;
 	background-image: url("../img/icon-down-dir.svg");
-	opacity: 1;
 }
 
 .sort-up-current::before {
@@ -769,8 +1065,30 @@ input [type="radio"].visually-hidden {
 	width: 12px;
 	height: 11px;
 	background-image: url("../img/icon-up-dir.svg");
-	opacity: 0.2;
 }
+
+
+.sort-type a,
+.sort-name a,
+.sort-up-current {
+	color: #000000;
+	opacity: 0.3;
+}
+
+.sort-type a:hover,
+.sort-name a:hover,
+.sort-up-current:hover {
+	color: #000000;
+	opacity: 0.6;
+}
+
+
+.sort-list a:active,
+.sort-up-current:active {
+	color: #000000;
+	opacity: 1;
+}
+
 
 
 /*---------------Стили шаблонов (каталог) ---------------*/
@@ -797,7 +1115,7 @@ input [type="radio"].visually-hidden {
 	list-style: none;
 }
 
-.catalog-item	{
+.catalog-item {
 	width: 360px;
 	margin: 0;
 	margin-bottom: 33px;
@@ -812,21 +1130,27 @@ input [type="radio"].visually-hidden {
 	color: #000000
 }
 
-.about {
-	font-size: 16px;
-	line-height: 18px;
-	color: #666666;
+.image {
+	margin: 0;
+	padding: 0;
 }
 
 .btn-order {
 	font-size: 16px;
 	line-height: 18px;
 	color: #eeeeee;
-
 	background-color: #fb565a;
-
+	border-radius: 5px;
 	height: 50px;
 	width: 200px;
+	border: none;
+}
+
+.btn-order span {
+	font-size: 16px;
+	line-height: 18px;	
+	color: #eeeeee;
+	text-transform: uppercase;
 }
 
 .button-orders button:hover,
@@ -835,15 +1159,8 @@ input [type="radio"].visually-hidden {
 }
 
 .button-orders button:active {
-	background-color: #d7373b;
-}
-
-
-.btn-order span {
-	font-size: 16px;
-	line-height: 18px;	
-	color: #eeeeee;
-	text-transform: uppercase;
+	box-shadow: 0 3px inset;
+	background-color: #c13135;
 }
 
 .catalog-item::before {
@@ -863,6 +1180,8 @@ input [type="radio"].visually-hidden {
 .catalog-item:hover {
 	box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
 }
+
+
 
 /*---------------Ссылки на страницы (каталог) ---------------*/
 .pagination-list {
@@ -917,11 +1236,10 @@ input [type="radio"].visually-hidden {
 }
 
 .pagination a:active {
-	color: #000000;
-	opacity: 0.3;
+	color: rgba(0, 0, 0, 0.3);
 	background-color: #d5d5d5;
+	box-shadow: 0 3px inset;
 }
-
 
 
 /*---------------СЕТОЧНЫЕ СТИЛИ ---------------*/
@@ -932,332 +1250,133 @@ input [type="radio"].visually-hidden {
 	clip: rect(0,0,0,0);
 }
 
-/*ГЛАВНАЯ*/
-/*---------------Сетка для навигации---------------*/
-.main-header {
-	width: 1200px;
-	background-color: #eeeeee;	
-	margin: 0 auto;
-	padding: 0;
-}
-
-.main-navigation {
-	display: flex;
-	justify-content: space-between;
-	width: 1200px;
-	margin: 0 auto;
-	padding: 0;
-}
-
-.main-header-logo {
-	width: 160px;
-	height: 65px;
-	margin: 0;
-	padding: 0;
-	padding-top: 49px;
-	padding-bottom: 18px;
-}
-
-.site-navigation {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
-}
-
-.site-navigation li {
-	padding: 0 30px;
-	padding-top: 83px;
-}
-
-.basket-link {
-	display: flex;
-	max-width: 130px;
-	margin: 0;
-	padding: 0;
-	padding-top: 83px;
-}
-
-.basket-link .basket {
-	position: relative;
-	padding-left: 45px;
-}
-
-.basket::before {
-	content: "";
-
-	position: absolute;
-	top: 1px;
-	left: 20px;
-
-	width: 16px;
-	height: 16px;
-
-	background-image: url("../img/cart-icon.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
 
 
+/*--------------- Обратная связь-СТИЛИ ---------------*/
+.modal {
+	display: none;
 
-/*---------------Сетка для слайдера---------------*/
-.sliders {
-	margin: 0;
-	margin-bottom: 80px;
-	padding: 0;
-}
-
-.sliders-list {
-	display: fle; /*чтобы не было каши */
-	width: 1200px;
-	padding: 0;
-	margin: 0 auto;
-}
-
-.slider-colums {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
-	width: 1200px;
-	padding: 0;
-	margin: 0 auto;
-	outline: 3px solid red;
-}
- 
-.slider-left {
-	width: 44%;
-	margin: 0;
-	padding: 0;
-	outline: 3px solid orange;
-}
-
-.slider-right {
-	width: 56px;
-	margin: 0;
-	padding: 0;
-}
-
-/*---------------Сетка для услуг---------------*/
-.services-list {
-	display: flex;
-	width: 1200px;
-	margin: 0 auto;
-	padding: 0;
-	border-bottom: 2px solid #e1e1e1;
-
-}
-
-.service-item {
-	width: 33%;
-	margin: 0;
-	margin-right: 100px;
-	margin-bottom: 80px;
-	padding: 0;
-	border: 3px solid purple;
-}
-
-.service-item h3 {
-	margin: 0;
-	padding: 26px 0;
-}
-
-.service-item p {
-	width: 245px;
-	margin: 0;
-	padding: 0;
-	padding-bottom: 35px;
-}
-
-
-/*---------------Сетка для описания---------------*/
-.about-colums {
-	display: flex;
-	justify-content: space-between;
-	width: 1200px;
-	margin: 0 auto;
-	padding: 0;
-	border-bottom: 2px solid #e1e1e1;
-}
-
-.about {
-	width: 58.3333%;
-	margin: 80px 0 75px 0;
-	padding: 0;
-	outline: 3px solid orange;
-}
-
-.slogan2 {
-	margin: 0;
-	padding: 38px 0 48px 0;
-}
-
-.about h4 {
-	margin: 0;
-	padding: 0;
-	padding-bottom: 35px;	
-}
-
-.orders li {
-	margin: 0;
-	padding: 0;
-	padding-bottom: 35px;
-}
-
-.orders li:nth-child(3) {
-	margin: 0;
-	padding: 0;
-}
-
-.block2004 {
-	width: 33.3333%;
-	margin: 40px 0 75px 0;
-	padding: 0;
-	outline: 3px solid blue;
-}
-
-.block2004 h4 {
-	text-align: center;
-	margin: 0;
-	padding: 41px 0 45px 0;
-}
-
-.block2004 .statistics {
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
-
-.tagging {
-	display: block;
-	margin: 0;
-	padding: 0;	
-	padding-top: 28px;
-}
-
-
-/*---------------Сетка для партнеров---------------*/
-.partners-section {
-	width: 1200px;
-	margin: 0 auto;
-	margin-bottom: 80px;
-	padding: 0;
-	outline: 3px solid red;
-}
-
-.partners-list {
-	display: flex;
-	align-items: center;
-	width: 1200px;
-	margin: 0;
-	padding: 0;
-}
-
-.partners-list li {
-	width: 25%;
-	text-align: center;
-	margin: 0;
-	padding: 0;
-}
-
-
-/*---------------Сетка для футера---------------*/
-.main-footer {
-	width: 1200px; /*Тут мы задали ширину блока */
-	margin: 0 auto;
-	padding: 0;
-}
-
-.map { 
-	margin-left: -500px;
-	margin-right: -500px;
-	text-align: center;
-	outline: 3px solid red;
-}
-
-.contacts {
-	position: absolute;
-	width: 230px;
-	height: 308px;
-	margin-top: -400px;
-	padding-left: 50px; 
-	padding-right: 40px;
+	position: fixed;
+	width: 760px;
+	padding: 0 100px; 
+	min-height: 590px;
+	color: #000000;
 	background-color: #ffffff;
+	bottom: 180px;
+	left: 240px;
+	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.7)
+
 }
 
-.contacts h4 {
-	margin: 50px 0 30px 0;
+.feedback-close {
+	position: absolute;
+	top: 78px;
+	right: 105px;
+	width: 21px;
+	height: 21px;
+	font-size: 0;
+	background-image: url(../img/close-cross.svg);
+	background-color: #ffffff;
+	border: 0;
+	opacity: 0.3;
+	cursor: pointer;
+}
+
+.letter {
 	padding: 0;
-}
-
-.contacts p:last-of-type {
 	margin: 0;
-	padding: 10px 0 35px 0;
 }
 
-.button-letter {
+.letter h3 {
+	margin: 0;
+	padding: 73px 100px 46px 0;
+	font-size: 45px;
+	list-style: 45px;
+}
+
+.feedback-colums {
 	margin: 0;
 	padding: 0;
-	width: 219px;
-	height: 50px;
-	text-align: center;
-	vertical-align: center; /* не работает!? */
-}
-
-
-.footer-colums {
-	display: flex;
-	width: 1200px;  /*надо ли тут ширину дублировать!? */
-	margin: 69px 0 0 0;
-	padding: 0;
-	outline: 3px solid blue;	
-}
-
-.social-type {
 	display: flex;
 	justify-content: space-between;
+}
+
+
+.letter label {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+.letter input {
+	margin: 0;
+	margin-bottom: 36px;
+	padding: 0;
+	width: 345px;
+	height: 50px;
+}
+
+.letter textarea {
+	margin: 0;
+	padding: 0;
+	width: 745px;
+	height: 104px;
+}
+
+.letter input,
+.letter textarea {
+	margin: 0;
+	padding: 0;
+	padding-left: 15px;
+	font-size: 16px;
+	line-height: 18px;
+	color: #d7dcde;
+	opacity: 0.5;
+
+	background-color: #ffffff;
+	border: 2px solid #d7dcde;
+	text-decoration: none;
+}
+
+.letter textarea {
+	margin-bottom: 47px;
+	padding-top: 14px;
+}
+
+.button-feedback-sent {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	padding: 17px 0px;
 	width: 260px;
-	margin: 0px 140px 0 0;
-	padding: 0;
-	list-style: none;
+
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	font-weight: normal;
+	color: #ffffff;
+	vertical-align: center;
+	text-transform: uppercase;
+	border-radius: 5px;
+
+	background-color: #fb565a;
+	border: none;
 }
 
-.button-social {
-	display: flex;
-	justify-content: center;
-	align-self: center;
-
-	width: 80px;
-	height: 80px;
-	border-radius: 100px;
-	background-color: #e1e1e1;
+.letter input:hover,
+.letter textarea:hover {
+	color: #b4b9bb;
+	border-color: #b4b9bb;
 }
 
-
-.footer-discount {
-	width: 66%;
-	margin: 0;
-	padding: 0;
-}
-
-.footer-discount b {
-	display: block;
-	padding: 9px 0 15px 0;
-}
-
-.footer-discount p {
-	margin: 0;
-	padding: 0;
+.letter input:focus,
+.letter textarea:focus {
+	border-color: #000000;
 }
 
 
 
 
 
-/*Каталог*/
-/*---------------Сетка для шапки---------------*/
-.page-title {
-	width: 1200px;
-	margin: 0 auto;
-	padding: 0;
-	padding-bottom: 116px;
-}

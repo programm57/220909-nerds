@@ -27,6 +27,7 @@
 		</header>
 		<main class="container">
 			<h1 class="visually-hidden">Cтудия дизайна Nerds</h1>	
+
 			<section class="sliders">
 				<h2 class="visually-hidden">Слайдер</h2>
 				<ul class="sliders-list">
@@ -35,12 +36,12 @@
 							<img src="img/slide1.png" width="698" height="413" alt="Два телефона">
 						</div>
 						<div class="slider-left">
-							<h3>Долго, дорого, скрупулезно</h3>
-							<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+							<h3>Долго, дорого, скрупулезно.</h3>
+							<p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
 							<a class="button button-slider" href="#">Узнать больше</a>
 						</div>
 					</li>
-					<li class="slider-colums slider2">
+					<li class="slider-colums slider2 visually-hidden">
 						<div class="slider-img">
 							<img src="img/slide2.png" width="698" height="413" alt="Два компьютера">
 						</div>
@@ -50,7 +51,7 @@
 							<a class="button button-slider" href="catalog.html">Узнать больше</a>
 						</div>
 					</li>
-					<li class="slider-colums slider3">
+					<li class="slider-colums slider3  visually-hidden">
 						<div class="slider-img">
 							<img src="img/slide3.png" width="698" height="413" alt="Планшет и телефон">
 						</div>
@@ -61,7 +62,9 @@
 						</div>
 					</li>
 				</ul>
-			</section>
+			</section>  
+
+
 			<section class="services">
 				<h2 class="visually-hidden">Виды работ</h2>
 				<ul class="services-list">
@@ -153,7 +156,7 @@
 				<p>191186, Санкт-Петербург,<br>
 				ул. Конюшенная, д. 19/8</p>
 				<p>тел. +7(812)275-75-75</p>
-				<a class="button button-letter" href="#">Напишите нам</a>
+				<a class="button-letter" href="#">Напишите нам</a>
 			</div>
 			<div class="footer-colums">
 				<div class="footer-social">
@@ -181,24 +184,33 @@
 				</div>
 			</div>
 		</footer>
-		<section class="feedback visually-hidden">
+		<section class="feedback modal">
 			<form class="letter" action="https://echo.htmlacademy.ru" method="post">
 				<h3>Напишите нам</h3>
-				<p>
-					<label for="user-name">Ваше имя:</label><br>
-					<input class="field-name" id="user-name" name="name" type="text" placeholder="Имя Фамилия">
-				</p>
-				<p>
-					<label for="user-email">Ваш e-mail:</label><br>
-					<input class="field-email" id="user-email" name="email" type="email" placeholder="email@example.com">
-				</p>
+				<div class="feedback-colums">
+					<p>
+						<label class="label-name" for="user-name">Ваше имя:</label><br>
+						<input class="field-name" id="user-name" name="name" type="text" placeholder="Имя Фамилия">
+					</p>
+					<p>
+						<label for="user-email">Ваш e-mail:</label><br>
+						<input class="field-email" id="user-email" name="email" type="email" placeholder="email@example.com">
+					</p>
+				</div>
 				<p>
 					<label for="user-letter">Текст письма:</label><br>
 					<textarea class="field-letter" id="user-letter" name="letter" type="text" rows="4" cols="" placeholder="В свободной форме"></textarea>	
 				</p>
-				<button class="button" typ="submit">Отправить</button>
+				<button class="button-feedback-sent" typ="submit">Отправить</button>
 			</form>			
 			<button class="feedback-close" type="button">Закрыть</button>
 		</section>
 	</body>
 </html>
+
+
+
+
+
+
+
