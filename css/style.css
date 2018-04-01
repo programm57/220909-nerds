@@ -56,6 +56,7 @@ input [type="radio"].visually-hidden {
 }
 
 
+
 /*--------------- Главная навигация-СТИЛИ ---------------*/
 .container {
 	margin: 0 auto;
@@ -167,6 +168,8 @@ input [type="radio"].visually-hidden {
 	border-bottom: 2px solid #fb565a;
 }
 
+
+
 /*--------------- Слайдеры-СТИЛИ ---------------*/
 .sliders {
 	margin: 0;
@@ -193,6 +196,7 @@ input [type="radio"].visually-hidden {
 
 .slider-img {
 	width: 50%;
+    line-height: 0;
 	margin: 0;
 	padding: 0;
 }
@@ -246,11 +250,10 @@ input [type="radio"].visually-hidden {
 	background-color: #e74246;
 }
 
-.sliders-list a:active,
-.basket-link a:active {
+.sliders-list a:active {
 	color: rgba(255, 255, 255, 0.3);
-	box-shadow: 0 3px inset;
-	background-color: #c13135;
+	box-shadow: inset 0 3px #c13135;
+	background-color: #d7373b;
 }
 
 	
@@ -321,9 +324,11 @@ input [type="radio"].visually-hidden {
 
 .services-list .web-site a:active {
 	color: rgba(255, 255, 255, 0.3);
-	background-color: #c13135;
-	box-shadow: 0 3px inset;
+	box-shadow: inset 0 3px #c13135;
+	background-color: #d7373b;
 }
+
+
 
 .services-list .aps a:hover,
 .services-list .aps a:focus {
@@ -333,7 +338,7 @@ input [type="radio"].visually-hidden {
 .services-list .aps a:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #00aa62;
-	box-shadow: 0 3px inset;
+	box-shadow: inset 0 3px #009958;
 }
 
 .services-list .presentation a:hover,
@@ -344,7 +349,7 @@ input [type="radio"].visually-hidden {
 .services-list .presentation a:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #e5a722;
-	box-shadow: 0 3px inset;
+	box-shadow: inset 0 3px #ce961f;
 }
 
 .services-list::after {
@@ -358,6 +363,7 @@ input [type="radio"].visually-hidden {
 }
 
 
+
 /*--------------- О студии-СТИЛИ ---------------*/
 .about-colums {
 	display: flex;
@@ -366,6 +372,7 @@ input [type="radio"].visually-hidden {
 	margin: 0 auto;
 	padding: 0;
 }
+
 
 
 /*--------------- О студии-СТИЛИ-левая сторона ---------------*/
@@ -633,7 +640,7 @@ input [type="radio"].visually-hidden {
 	text-transform: uppercase;
 	border-radius: 3px;
 	background-color: #fb565a;
-	border: none;  /* неправильно отображается */
+	border: none;
 }
 
 .button-letter:hover,
@@ -643,16 +650,17 @@ input [type="radio"].visually-hidden {
 
 .button-letter:active {
 	color: rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 3px #c13135;
 	background-color: #d7373b;
-	box-shadow: 0 3px inset;
 }
+
 
 
 /*--------------- Футер-Подвал-СТИЛИ ---------------*/
 .footer-colums {
 	display: flex;
 	width: 1200px;  
-	margin: 62px 0 0 0;
+	margin: 62px 0 75px 0;
 	padding: 0;
 }
 
@@ -687,9 +695,11 @@ input [type="radio"].visually-hidden {
 }
 
 .button-social:active {
+	color: rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 3px #c13135;
 	background-color: #d7373b;
-	box-shadow: 0 3px rgba(0, 0, 0, 0.3) inset;
 }
+
 
 .button-social:active img {
 	opacity: 0.3
@@ -717,6 +727,7 @@ input [type="radio"].visually-hidden {
 	line-height: 22px;
 	color: #444444;
 }
+
 
 
 /*--------------- Каталог-СТИЛИ ---------------*/
@@ -845,8 +856,6 @@ input [type="radio"].visually-hidden {
 
 
 
-
-
 /*--------------- Фильтр-Сетка-СТИЛИ ---------------*/
 .filter-item-grid {
 	margin: 0 0 25px 0;
@@ -917,8 +926,6 @@ input [type="radio"].visually-hidden {
 	color: #dfdfdf;
 	opacity: 0.4;
 }
-
-
 
 
 
@@ -1234,9 +1241,9 @@ input [type="radio"].visually-hidden {
 	opacity: 1;
 }
 
-/*.catalog-item:hover {
+.catalog-item:hover {
 	box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
-} */
+} 
 
 .catalog-item h4 {
 	margin: 26px 0 15px 0;
@@ -1382,18 +1389,22 @@ input [type="radio"].visually-hidden {
 
 /*--------------- Обратная связь-СТИЛИ ---------------*/
 .modal {
-	display: none;
-
+	display: ;
+	margin: -395px 0 0 -480px;
 	position: fixed;
+	top: 50%;
 	width: 760px;
-	padding: 0 100px; 
-	min-height: 590px;
+	padding: 100px 100px; 
+	min-height: 390px;
 	color: #000000;
 	background-color: #ffffff;
-	bottom: 180px;
-	left: 240px;
+	left: 50%;
 	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.7)
 
+}
+
+.feedback-colums p {
+	margin: 0 0 20px; 
 }
 
 .feedback-close {
@@ -1416,10 +1427,9 @@ input [type="radio"].visually-hidden {
 }
 
 .letter h3 {
-	margin: 0;
-	padding: 73px 100px 46px 0;
+	margin: 0 0 40px;
+	padding: 0;
 	font-size: 45px;
-	list-style: 45px;
 }
 
 .feedback-colums {
@@ -1431,7 +1441,8 @@ input [type="radio"].visually-hidden {
 
 
 .letter label {
-	margin: 0;
+	display: block;
+	margin: 0 0 12px 0;
 	padding: 0;
 	font-size: 16px;
 	line-height: 18px;
@@ -1439,6 +1450,7 @@ input [type="radio"].visually-hidden {
 }
 
 .letter input {
+	box-sizing: border-box;
 	margin: 0;
 	margin-bottom: 36px;
 	padding: 0;
@@ -1460,9 +1472,6 @@ input [type="radio"].visually-hidden {
 	padding-left: 15px;
 	font-size: 16px;
 	line-height: 18px;
-	color: #d7dcde;
-	opacity: 0.5;
-
 	background-color: #ffffff;
 	border: 2px solid #d7dcde;
 	text-decoration: none;
@@ -1503,8 +1512,3 @@ input [type="radio"].visually-hidden {
 .letter textarea:focus {
 	border-color: #000000;
 }
-
-
-
-
-
