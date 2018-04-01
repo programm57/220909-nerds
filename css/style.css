@@ -195,7 +195,6 @@ input [type="radio"].visually-hidden {
 	width: 50%;
 	margin: 0;
 	padding: 0;
-	line-height: 0;
 }
 
 .slider-img img {
@@ -1085,7 +1084,7 @@ input [type="radio"].visually-hidden {
 .sort-columns {
 	display: flex;
 	justify-content: space-between;
-	margin: 0;
+	margin: 0 0 -4px 0;
 	padding: 0;
 }
 
@@ -1093,8 +1092,8 @@ input [type="radio"].visually-hidden {
 	display: flex;
 	justify-content: space-between;
 	width: 300px;
-	margin: 0;
-	padding: 0;
+	margin: 2px 0 0 0;
+	padding: 0 0 0 5px;
 }
 
 .sort-kind {
@@ -1176,7 +1175,7 @@ input [type="radio"].visually-hidden {
 .catalog-item {
 	width: 360px;
 	margin: 0;
-	margin-bottom: 33px;
+	margin-bottom: 28px;
 	padding: 0;
 }
 
@@ -1217,8 +1216,8 @@ input [type="radio"].visually-hidden {
 }
 
 .button-orders button:active {
-	box-shadow: 0 3px inset;
-	background-color: #c13135;
+	box-shadow: inset 0 3px #c13135;
+	background-color: #d7373b;
 }
 
 .catalog-item::before {
@@ -1235,9 +1234,74 @@ input [type="radio"].visually-hidden {
 	opacity: 1;
 }
 
-.catalog-item:hover {
+/*.catalog-item:hover {
 	box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
+} */
+
+.catalog-item h4 {
+	margin: 26px 0 15px 0;
+	padding: 0;
 }
+
+.catalog-item a {
+	font-size: 18px;
+	line-height: 30px;
+	text-decoration: none;
+	color: #000;
+}
+
+.catalog-item p {
+	font-size: 16px;
+	line-height: 18px;
+	color: #666;
+}
+
+.button-orders {
+	margin: 0;
+	padding: 0;
+}
+
+.catalog-item .btn-order {
+	margin: 14px 0 0 0;
+	padding: 0
+}
+
+.catalog-item {
+	position: relative;
+}
+
+.about-item {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+	min-height: 231px;
+
+	background-color: #e1e1e1;
+	text-align: center;
+}
+
+.about-barbershop,
+.about-mishka {
+	bottom: 0;
+}
+
+.about-plus {
+	bottom: 3px;
+}
+
+.about-kvast {
+	bottom: 4px;
+}
+
+.catalog-item .about-item {
+	display: none;
+}
+
+.catalog-item:hover .about-item {
+	display: block;
+}
+
 
 
 
@@ -1247,7 +1311,7 @@ input [type="radio"].visually-hidden {
 	font-size: 16px;
 	line-height: 18px;
 	color: #000000;
-	text-transform: uppercase
+	text-transform: uppercase;
 	margin: 0;
 	margin-bottom: 60px;
 	padding: 0;
@@ -1256,8 +1320,10 @@ input [type="radio"].visually-hidden {
 
 .pagination-item a {
 	display: block;
-	padding: 17px 22px;
-	margin-right: 10px;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 17px 20px;
+	margin: 0 11px 0 0;
 	background-color: #eeeeee;
 	border-radius: 5px;
 	color: #000000;
@@ -1267,10 +1333,12 @@ input [type="radio"].visually-hidden {
 
 .pagination-item-current a {
 	display: block;
-	padding: 12px 17px;
-	margin-right: 10px;
+	font-size: 16px;
+	line-height: 18px;
+	margin: 0 11px 0 0;
+	padding: 14px 18px;
 	background-color: #ffffff;
-	border: 5px #eeeeee solid;
+	border: 3px #eeeeee solid;
 	border-radius: 5px;
 	color: #000000;
 	text-transform: uppercase;
@@ -1279,8 +1347,10 @@ input [type="radio"].visually-hidden {
 
 .pagination-item-next a {
 	display: block;
-	padding: 17px 80px;
-	margin-right: 10px;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 17px 78px;
+	margin: 0;
 	background-color: #eeeeee;
 	border-radius: 5px;
 	color: #000000;
