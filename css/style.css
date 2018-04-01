@@ -1389,7 +1389,7 @@ input [type="radio"].visually-hidden {
 
 /*--------------- Обратная связь-СТИЛИ ---------------*/
 .modal {
-	display: ;
+	display: none;
 	margin: -395px 0 0 -480px;
 	position: fixed;
 	top: 50%;
