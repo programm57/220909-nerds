@@ -34,6 +34,13 @@ input [type="radio"].visually-hidden {
 	position: absolute;
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(0,0,0,0);
+}
+
 
 
 /*--------------- Кнопка ---------------*/
@@ -49,7 +56,7 @@ input [type="radio"].visually-hidden {
 	color: #ffffff;
 	vertical-align: middle;
 	text-transform: uppercase;
-	border-radius: 5px;
+	border-radius: 3px;
 
 	background-color: #fb565a;
 	border: none;
@@ -57,7 +64,7 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- Главная навигация-СТИЛИ ---------------*/
+/*--------------- Навигация (главная) ---------------*/
 .container {
 	margin: 0 auto;
 	padding: 0;
@@ -73,7 +80,7 @@ input [type="radio"].visually-hidden {
 	width: 200px;
 	height: 65px;
 	margin: 0;
-	padding: 49px 20px 18px 20px;
+	padding: 49px 20px 0 20px;
 }
 
 .main-header-logo img:focus,
@@ -122,6 +129,20 @@ input [type="radio"].visually-hidden {
 	color: #000000;
 }
 
+.site-navigation-current {
+	position: relative;
+}
+
+.site-navigation-current::after {
+	content: "";
+	position: absolute;
+	width: 74px;
+	height: 2px;
+	background-color: #fb565a;
+	top: 108px;
+	right: 23px;
+}
+
 .basket-link {
 	display: flex;
 	justify-content: flex-end;
@@ -140,7 +161,7 @@ input [type="radio"].visually-hidden {
 	content: "";
 
 	position: absolute;
-	top: 2px;
+	top: 7px;
 	left: 5px;
 
 	width: 16px;
@@ -164,101 +185,154 @@ input [type="radio"].visually-hidden {
 	opacity: 0.3;
 }
 
-.site-navigation-current a {
-	border-bottom: 2px solid #fb565a;
+
+
+/*--------------- Слайдеры (главная) ---------------*/
+
+.container-slider {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
 }
 
-
-
-/*--------------- Слайдеры-СТИЛИ ---------------*/
-.sliders {
-	margin: 0;
-	margin-bottom: 80px;
-	padding: 0;
+.slider {
+	position: relative;
 	background-color: #eeeeee;
+	margin: 0 0 80px 0;
 }
 
-.slider-colums {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
-	width: 1200px;
-	min-height: 412px;
-	padding: 0;
-	margin: 0 auto;
+.slider-controls {
+  	position: absolute;
+  	left: 50%;
+  	bottom: 104px;
+  	z-index: 100;
+ 
+  	width: 160px;
+  	height: 18px;
+
+  	text-align: center;
+  	font-size: 0;
+  	transform: translateX(-50%);
 }
 
-.slider-left {
-	width: 50%;
+.slider-controls i {
+	position: relative;
+  	display: inline-block;
+  	width: 18px;
+  	height: 18px;
+  	padding: 8px;
+  	border-radius: 50%;
+  	cursor: pointer;
+}
+
+.slider-controls i::after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	z-index: 1;
+	width: 18px;
+	height: 18px;
+	background: #ffffff;
+	border-radius: 50%;
+}
+
+.slider-controls .active::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 2;
+	width: 4px;
+	height: 4px;
+	margin: -4px;
+	background-color: inherit;
+	border: 2px solid #c1c1c1;
+	border-radius: 50%  
+}
+
+
+.slider-list {
 	margin: 0;
-	padding: 60px 20px 0 20px;
-}
-
-.slider-img {
-	width: 50%;
-    line-height: 0;
-	margin: 0;
 	padding: 0;
-}
-
-.slider-img img {
-	max-width: none;
-	margin-left: -169px;
-}
-
-.sliders-list {
 	list-style: none;
-	text-align: left;
-	display: flex;
-	width: 1200px;
-	padding: 0;
-	margin: 0 auto;
 }
 
-.sliders-list h3 {
+.slider-item {
+	display: none;
+	padding: 78px 0 80px 0;
+}
+
+.slider-item:nth-child(1) {
+	display: block;
+}
+
+.slider-item:nth-child(1) {
+  	background-image: url("../img/slide1.png");
+  	background-repeat: no-repeat;
+  	background-position: 93% 18px;
+}
+
+.slider-item:nth-child(2) {
+  background-image: url("../img/slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slider-item:nth-child(3) {
+  background-image: url("../img/slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+
+.slider-item h3 {
 	font-size: 55px;
 	line-height: 55px;
-	margin: 0 00 26px 0;
-	padding:  0;
+	font-weight: bold;
+	max-width: 600px;
+	margin: 0 0 27px 0;
 }
 
-.slider-left p {
-	font-size: 16px;
-	line-height: 24px;
-	width: 460px;
-	margin: 0px 0 40px 0; 
-	padding: 0;
-}
-
-.sliders-list a {
-	text-decoration: none;
-	font-size: 16px;
-	line-height: 18px;
-	color: #ffffff;
-	text-transform: uppercase;
-	background-color: #fb565a;
+.slider-item p {
+	max-width: 430px;
+	margin: 0 0 38px 0;
+	color: #283136
 }
 
 .button-slider {
-	display: inline-block;
-	min-width: 190px;
-	padding: 16px 25px;
-} 
-
-.sliders-list a:hover,
-.sliders-list a:focus {
-	background-color: #e74246;
+  	display: block;
+  	width: 240px;
+  	padding: 16px 0;
+  
+  	font-size: 16px;
+  	line-height: 18px;
+  	color: #ffffff;
+  	text-transform: uppercase;
+  	text-align: center;
+  	text-decoration: none;
+  
+  	background-color: #fb565a;
+  	border-radius: 3px;
+  	
+  	border: none;
 }
 
-.sliders-list a:active {
-	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0 3px #c13135;
-	background-color: #d7373b;
+.button-slider:hover,
+.button-slider:focus {
+  background-color: #e74246;
 }
 
-	
+.button-slider:active {
+  color: rgba(255, 255, 255, 0.3);
+  
+  background-color: #d7373b;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
 
-/*--------------- Услуги-СТИЛИ ---------------*/
+
+
+/*--------------- Услуги (главная) ---------------*/
 .services-list {
 	position: relative;
 	display: flex;
@@ -299,6 +373,7 @@ input [type="radio"].visually-hidden {
 }
 
 .service-item p {
+	color: #283136;
 	width: 245px;
 	margin: 0 0 32px 0;
 	padding: 0;
@@ -317,36 +392,34 @@ input [type="radio"].visually-hidden {
 	background-color: #efc84a
 }
 
-.services-list .web-site a:hover,
-.services-list .web-site a:focus {
+.web-site a:hover,
+.web-site a:focus {
 	background-color: #e74246;
 }
 
-.services-list .web-site a:active {
+.web-site a:active {
 	color: rgba(255, 255, 255, 0.3);
 	box-shadow: inset 0 3px #c13135;
 	background-color: #d7373b;
 }
 
-
-
-.services-list .aps a:hover,
-.services-list .aps a:focus {
+.aps a:hover,
+.aps a:focus {
 	background-color: #00bc6c;
 }
 
-.services-list .aps a:active {
+.aps a:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #00aa62;
 	box-shadow: inset 0 3px #009958;
 }
 
-.services-list .presentation a:hover,
-.services-list .presentation a:focus {
+.presentation a:hover,
+.presentation a:focus {
 	background-color: #eab534;
 }
 
-.services-list .presentation a:active {
+.presentation a:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #e5a722;
 	box-shadow: inset 0 3px #ce961f;
@@ -364,7 +437,7 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- О студии-СТИЛИ ---------------*/
+/*--------------- О студии (главная) ---------------*/
 .about-colums {
 	display: flex;
 	justify-content: space-between;
@@ -375,7 +448,7 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- О студии-СТИЛИ-левая сторона ---------------*/
+/*--------------- О студии-левая сторона (главная) ---------------*/
 .about {
 	width: 800px;
 	margin: 0;
@@ -392,6 +465,7 @@ input [type="radio"].visually-hidden {
 }
 
 .slogan2 {
+	color: #283136;
 	width: 680px;
 	margin: 33px 0 39px 0;
 	padding: 0;
@@ -409,11 +483,12 @@ input [type="radio"].visually-hidden {
 	padding-bottom: 73px;
 }
 
-.orders li {
+.orders li {	
 	display: block;
 	position: relative;
 	margin: 0 0 0 -4px;
 	padding: 0 0 24px 0;
+	color: #283136;
 }
 
 .orders li:nth-child(2) {
@@ -436,7 +511,8 @@ input [type="radio"].visually-hidden {
 }
 
 
-/*--------------- О студии-СТИЛИ-правая сторона ---------------*/
+
+/*--------------- О студии-правая сторона (главная) ---------------*/
 .block2004 {
 	width: 400px;
 	margin: 26px 0 0 40px;
@@ -471,7 +547,6 @@ input [type="radio"].visually-hidden {
 	padding: 0; 
 }
 
-
 .statistics .number {
 	font-size: 45px;
 	line-height: 10.06px;
@@ -486,6 +561,7 @@ input [type="radio"].visually-hidden {
 }
 
 .statistics .tagging {
+	color: #283136;
 	margin: 19px 0 0 0;
 	padding: 0;
 	font-size: 16px;
@@ -501,7 +577,7 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- Партнеры-Стили ---------------*/
+/*--------------- Партнеры (главная) ---------------*/
 .partners-section {
 	width: 1200px;
 	margin: 0 auto;
@@ -545,15 +621,12 @@ input [type="radio"].visually-hidden {
 
 .partners-item::before {
 	content: "";
-
 	position: absolute;
 	top: 50%;
 	margin-top: -26px;
 	left: 0px;
-
 	width: 2px;
 	height: 52px;
-
 	background-color: #d1d1d1;
 	filter: opacity(1);
 }
@@ -584,156 +657,10 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- Футер-СТИЛИ ---------------*/
-.main-footer {
-	width: 1200px;
-	margin: 0 auto;
-	padding: 0;
-}
-
-.map { 
-	margin-left: -500px;
-	margin-right: -500px;
-	text-align: center;
-}
-
-.contacts {
-	position: absolute;
-	width: 219px;
-	height: 308px;
-	margin-left: 21px;
-	margin-top: -370px;
-	padding: 0 50px;
-	background-color: #ffffff;
-}
-
-.contacts h4 {
-	margin: 0 0 0 0;
-	padding: 50px 0 23px 0;
-	font-size: 18px;
-	line-height: 30px;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-.contacts p {
-	margin: 0; 
-	padding: 0 0 8px 0;
-	font-size: 16px;
-	line-height: 18px;
-	color: #61686c;
-}
-
-.contacts p:last-of-type {
-	margin: 0;
-	padding: 10px 0 37px 0;
-}
-
-.button-letter {
-	display: block;
-	padding: 16px 25px;
-	font-size: 16px;
-	line-height: 18px;
-	text-align: center;
-	font-weight: normal;
-	color: #ffffff;
-	vertical-align: middle ;
-	text-transform: uppercase;
-	border-radius: 3px;
-	background-color: #fb565a;
-	border: none;
-}
-
-.button-letter:hover,
-.button-letter:focus {
-	background-color: #e74246;
-}
-
-.button-letter:active {
-	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0 3px #c13135;
-	background-color: #d7373b;
-}
-
-
-
-/*--------------- Футер-Подвал-СТИЛИ ---------------*/
-.footer-colums {
-	display: flex;
-	width: 1200px;  
-	margin: 62px 0 75px 0;
-	padding: 0;
-}
-
-.footer-social {
-	margin: 0;
-	padding: 0;
-	width: 300px;
-}
-
-.social-type {
-	display: flex;
-	justify-content: space-between;
-	margin: 0;
-	padding: 0 20px;
-	list-style: none;
-}
-
-.button-social {
-	display: flex;
-	justify-content: center;
-	align-self: center;
-
-	width: 80px;
-	height: 80px;
-	border-radius: 100px;
-	background-color: #e1e1e1;
-}
-
-.button-social:hover,
-.button-social:focus {
-	background-color: #e74246;
-}
-
-.button-social:active {
-	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0 3px #c13135;
-	background-color: #d7373b;
-}
-
-
-.button-social:active img {
-	opacity: 0.3
-}
-
-.footer-discount {
-	width: 900px;
-	margin: 0;
-	padding: 0;
-}
-
-.footer-discount b {
-	display: block;
-	margin: 0 0 0 120px;
-	padding: 6px 0 0 0;
-	font-size: 36px;
-	line-height: 36px;
-	font-weight: bold;
-}
-
-.footer-discount p {
-	margin: 10px 0 0 0;
-	padding: 0 0 0 120px;
-	font-size: 16px;
-	line-height: 22px;
-	color: #444444;
-}
-
-
-
-/*--------------- Каталог-СТИЛИ ---------------*/
+/*--------------- Каталог ---------------*/
 .page-title {
 	margin: 0 -2000px;
-	padding: 60px 20px 106px 20px;
+	padding: 79px 20px 106px 17px;
 	font-size: 55px;
 	line-height: 55px;
 	background-color: #eeeeee;
@@ -742,7 +669,7 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- Фильтры-СТИЛИ ---------------*/
+/*--------------- Фильтры (каталог) ---------------*/
 .filters {
 	width: 360px;
 	margin: 0;
@@ -751,11 +678,10 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- Фильтр-Стоимость-СТИЛИ ---------------*/
+/*--------------- Фильтр-Стоимость (каталог) ---------------*/
 .filter-item-cost {
 	margin: 57px 0 56px 0;
 	padding: 0;
-
 	border: none;
 }
 
@@ -777,22 +703,20 @@ input [type="radio"].visually-hidden {
 
 .range-controls {
 	height: 41px;
-	margin: 0 0 17px 0;
+	margin: 0 0 15px 0;
 	padding: 39px 20px 0 20px;
 	background-color: #f1f1f1;
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 .range-controls .scale {
 	height: 2px;
-
 	background: #d7dcde;
 }
 
 .range-controls .bar {
 	width: 70%;
 	height: 2px;
-
 	background: #00ca74;
 }
 
@@ -807,7 +731,6 @@ input [type="radio"].visually-hidden {
 	width: 4px;
 	height: 4px;
 	padding: 0;
-
 	border: 8px solid #ffffff;
 	background-color: #ababab;
 	box-shadow: 0 2px 1px 0 #cfcfcf; 	
@@ -830,7 +753,6 @@ input [type="radio"].visually-hidden {
 .price-controls label {
 	display: inline-block;
 	width: 50%;
-
 	font-size: 16px;
 	text-transform: uppercase;
 }
@@ -839,12 +761,10 @@ input [type="radio"].visually-hidden {
 	width: 60px;
 	padding: 8px 10px;
 	margin-left: 10px;
-
 	font-family: Roboto, Arial, sans-serif;
 	font-size: 16px;
 	text-align: center;
 	color: #283136;
-
 	border: none;
 	border-radius: 3px;
 	background-color: #f1f1f1;
@@ -856,7 +776,7 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- Фильтр-Сетка-СТИЛИ ---------------*/
+/*--------------- Фильтр-Сетка (каталог) ---------------*/
 .filter-item-grid {
 	margin: 0 0 25px 0;
 	padding: 0;
@@ -895,14 +815,11 @@ input [type="radio"].visually-hidden {
 
 .filter-input-radio + label::before {
 	content: "";
-
 	position: absolute;
 	left: -35px;
 	top: -2px;
-
 	width: 27px;
 	height: 27px;
-
 	background-image: url("../img/radio-off.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -912,14 +829,11 @@ input [type="radio"].visually-hidden {
 
 .filter-input-radio:checked + label::after {
 	content: "";
-
 	position: absolute;
 	left: -35px;
 	top: -2px;
-
 	width: 27px;
 	height: 27px;
-
 	background-image: url("../img/radio-on.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -929,7 +843,7 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- Фильтр-Особенности-СТИЛИ ---------------*/
+/*--------------- Фильтр-Особенности (каталог) ---------------*/
 .filter-item-features {
 	margin: 0 0 30px 0;
 	padding: 0;
@@ -937,7 +851,7 @@ input [type="radio"].visually-hidden {
 }
 
 .filter-item-features legend {
-	margin: 0 0 16px 0;
+	margin: 0 0 17px 0;
 	padding: 0;
 	font-size: 18px;
 	line-height: 30px;
@@ -977,14 +891,11 @@ input [type="radio"].visually-hidden {
 
 .filter-input-checkbox + label::before {
 	content: "";
-
 	position: absolute;
 	left: -35px;
 	top: -2px;
-
 	width: 27px;
 	height: 27px;
-
 	background-image: url("../img/checkbox-off.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -993,14 +904,11 @@ input [type="radio"].visually-hidden {
 
 .filter-input-checkbox:checked + label::after {
 	content: "";
-
 	position: absolute;
 	left: -35px;
 	top: -2px;
-
 	width: 27px;
 	height: 27px;
-
 	background-image: url("../img/checkbox-on.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -1009,14 +917,13 @@ input [type="radio"].visually-hidden {
 
 
 
-/*--------------- Фильтр-Кнопка-СТИЛИ ---------------*/
+/*--------------- Фильтр-Кнопка (каталог) ---------------*/
 .filter-button {
 	display: inline-block;
 	width: 260px;
 	height: 50px;
 	margin-right: 0;
 	padding: 0;
-
 	font-size: 16px;
 	line-height: 18px;
 	text-align: center;
@@ -1024,21 +931,19 @@ input [type="radio"].visually-hidden {
 	color: #000000;
 	vertical-align: center;
 	text-transform: uppercase;
-	border-radius: 5px;
-
+	border-radius: 3px;
 	background-color: #eeeeee;
 	border: none;
 }
 
 
 
-/*--------------- Эффекты-псевдоэлементов-Каталог ---------------*/
+/*--------------- Эффекты-псевдоэлементов (каталог) ---------------*/
 .filter-input:hover + label, 
 .filter-input:focus + label {
 	color: #000000;
-	opacity: 1;	/*не разобрался */
+	opacity: 1;	
 }
-
 
 .filter-button:hover,
 .filter-button:focus {
@@ -1053,9 +958,9 @@ input [type="radio"].visually-hidden {
 
 
 
-/*---------------Сортировка-СТИЛИ ---------------*/
+/*---------------Сортировка (каталог) ---------------*/
 .sort {
-	margin: 60px 0 60px 0;
+	margin: 60px 0 58px 0;
 	padding: 0; 
 }
 
@@ -1077,11 +982,15 @@ input [type="radio"].visually-hidden {
 	line-height: 18px;
 	text-transform: uppercase;
 	font-weight: bold;
-
 	color: #000000;
 }
 
 .sort-list {
+	display: flex;
+	justify-content: flex-start;
+	width: 300px;
+	margin: 2px 0 0 0;
+	padding: 0 0 0 5px; 
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -1093,14 +1002,6 @@ input [type="radio"].visually-hidden {
 	justify-content: space-between;
 	margin: 0 0 -4px 0;
 	padding: 0;
-}
-
-.sort-list {
-	display: flex;
-	justify-content: space-between;
-	width: 300px;
-	margin: 2px 0 0 0;
-	padding: 0 0 0 5px;
 }
 
 .sort-kind {
@@ -1115,22 +1016,36 @@ input [type="radio"].visually-hidden {
 	min-height: 18px;
 }
 
+.sort-price-current {
+	padding: 0 26px 0 0;
+}
+
+.sort-type {
+	padding: 0 25px 0 0;
+}
+
 .sort-down::before {
 	content: "";
 	display: block;
 	width: 12px;
-	height: 11px;
+	height: 10px;
 	background-image: url("../img/icon-down-dir.svg");
+	background-repeat: no-repeat;
+	position: relative;
+	top: 4px;
+	left: 4px;
 }
 
 .sort-up-current::before {
 	content: "";
 	display: block;
 	width: 12px;
-	height: 11px;
+	height: 10px;
 	background-image: url("../img/icon-up-dir.svg");
+	background-repeat: no-repeat;
+	position: relative;
+	top: 4px;
 }
-
 
 .sort-type a,
 .sort-name a,
@@ -1145,7 +1060,6 @@ input [type="radio"].visually-hidden {
 	color: #000000;
 	opacity: 0.6;
 }
-
 
 .sort-list a:active,
 .sort-up-current:active {
@@ -1194,7 +1108,7 @@ input [type="radio"].visually-hidden {
 	color: #000000
 }
 
-.image {
+.image-template {
 	margin: 0;
 	padding: 0;
 }
@@ -1204,7 +1118,7 @@ input [type="radio"].visually-hidden {
 	line-height: 18px;
 	color: #eeeeee;
 	background-color: #fb565a;
-	border-radius: 5px;
+	border-radius: 3px;
 	height: 50px;
 	width: 200px;
 	border: none;
@@ -1232,7 +1146,7 @@ input [type="radio"].visually-hidden {
 	display: block;
 	width: 360px;
 	min-height: 40px;
-	background: url(../img/browser.svg);
+	background: url("../img/browser.svg");
 	background-repeat: no-repeat;
 	opacity: 0.12;
 }
@@ -1246,7 +1160,7 @@ input [type="radio"].visually-hidden {
 } 
 
 .catalog-item h4 {
-	margin: 26px 0 15px 0;
+	margin: 23px 0 15px 0;
 	padding: 0;
 }
 
@@ -1264,7 +1178,7 @@ input [type="radio"].visually-hidden {
 }
 
 .button-orders {
-	margin: 0;
+	margin: 16px 0 0 0;
 	padding: 0;
 }
 
@@ -1281,7 +1195,7 @@ input [type="radio"].visually-hidden {
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 5px;
+	bottom: 0;
 	min-height: 231px;
 
 	background-color: #e1e1e1;
@@ -1311,7 +1225,6 @@ input [type="radio"].visually-hidden {
 
 
 
-
 /*---------------Ссылки на страницы (каталог) ---------------*/
 .pagination-list {
 	display: flex;
@@ -1332,7 +1245,7 @@ input [type="radio"].visually-hidden {
 	padding: 17px 20px;
 	margin: 0 11px 0 0;
 	background-color: #eeeeee;
-	border-radius: 5px;
+	border-radius: 3px;
 	color: #000000;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -1346,7 +1259,7 @@ input [type="radio"].visually-hidden {
 	padding: 14px 18px;
 	background-color: #ffffff;
 	border: 3px #eeeeee solid;
-	border-radius: 5px;
+	border-radius: 3px;
 	color: #000000;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -1359,7 +1272,7 @@ input [type="radio"].visually-hidden {
 	padding: 17px 78px;
 	margin: 0;
 	background-color: #eeeeee;
-	border-radius: 5px;
+	border-radius: 3px;
 	color: #000000;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -1377,34 +1290,20 @@ input [type="radio"].visually-hidden {
 }
 
 
-/*---------------СЕТОЧНЫЕ СТИЛИ ---------------*/
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	clip: rect(0,0,0,0);
-}
 
-
-
-/*--------------- Обратная связь-СТИЛИ ---------------*/
-.modal {
+/*--------------- Обратная связь (модалка) ---------------*/
+.feedback {
 	display: none;
-	margin: -395px 0 0 -480px;
+	margin: -310px 0 0 -480px;
 	position: fixed;
 	top: 50%;
+	left: 50%;
 	width: 760px;
-	padding: 100px 100px; 
-	min-height: 390px;
+	padding: 0 100px; 
+	min-height: 590px;
 	color: #000000;
 	background-color: #ffffff;
-	left: 50%;
-	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.7)
-
-}
-
-.feedback-colums p {
-	margin: 0 0 20px; 
+	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.7);
 }
 
 .feedback-close {
@@ -1414,7 +1313,7 @@ input [type="radio"].visually-hidden {
 	width: 21px;
 	height: 21px;
 	font-size: 0;
-	background-image: url(../img/close-cross.svg);
+	background-image: url("../img/close-cross.svg");
 	background-color: #ffffff;
 	border: 0;
 	opacity: 0.3;
@@ -1427,7 +1326,7 @@ input [type="radio"].visually-hidden {
 }
 
 .letter h3 {
-	margin: 0 0 40px;
+	margin: 73px 0 50px 0;
 	padding: 0;
 	font-size: 45px;
 }
@@ -1439,6 +1338,10 @@ input [type="radio"].visually-hidden {
 	justify-content: space-between;
 }
 
+.feedback  p {
+	margin: 0;
+	padding: 0;
+}
 
 .letter label {
 	display: block;
@@ -1451,53 +1354,42 @@ input [type="radio"].visually-hidden {
 
 .letter input {
 	box-sizing: border-box;
-	margin: 0;
-	margin-bottom: 36px;
-	padding: 0;
-	width: 345px;
+	margin: 0 0 36px 0;
+	padding: 0 0 0 15px;
+	width: 360px;
 	height: 50px;
 }
 
 .letter textarea {
+	min-height: 118px;
 	margin: 0;
-	padding: 0;
+	padding: 15px 0 0 12px;
 	width: 745px;
 	height: 104px;
 }
 
 .letter input,
 .letter textarea {
-	margin: 0;
-	padding: 0;
-	padding-left: 15px;
 	font-size: 16px;
 	line-height: 18px;
-	background-color: #ffffff;
+	background-color: #ffffff; 
 	border: 2px solid #d7dcde;
 	text-decoration: none;
 }
 
-.letter textarea {
-	margin-bottom: 47px;
-	padding-top: 14px;
-}
-
 .button-feedback-sent {
 	display: inline-block;
-	margin: 0;
-	padding: 0;
+	margin: 47px 0 84px 0;
 	padding: 17px 0px;
 	width: 260px;
-
 	font-size: 16px;
 	line-height: 18px;
 	text-align: center;
 	font-weight: normal;
 	color: #ffffff;
-	vertical-align: center;
+	vertical-align: middle;
 	text-transform: uppercase;
-	border-radius: 5px;
-
+	border-radius: 3px;
 	background-color: #fb565a;
 	border: none;
 }
@@ -1510,5 +1402,158 @@ input [type="radio"].visually-hidden {
 
 .letter input:focus,
 .letter textarea:focus {
+	color: 
 	border-color: #000000;
+}
+
+
+
+/*--------------- Футер ---------------*/
+.main-footer {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.map { 
+	margin-left: -500px;
+	margin-right: -500px;
+	text-align: center;
+}
+
+.map iframe {
+	position: absolute;
+	left: 0;
+}
+
+.contacts {
+	position: absolute;
+	width: 219px;
+	height: 308px;
+	margin-left: 21px;
+	margin-top: -370px;
+	padding: 0 50px;
+	background-color: #ffffff;
+}
+
+.contacts h4 {
+	margin: 0 0 0 0;
+	padding: 50px 0 23px 0;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.contacts p {
+	margin: 0; 
+	padding: 0 0 8px 0;
+	font-size: 16px;
+	line-height: 18px;
+	color: #666666;
+}
+
+.contacts p:last-of-type {
+	color: #666666;
+	margin: 0;
+	padding: 10px 0 37px 0;
+}
+
+.button-letter {
+	display: block;
+	padding: 16px 25px;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	font-weight: normal;
+	color: #ffffff;
+	vertical-align: middle ;
+	text-transform: uppercase;
+	border-radius: 3px;
+	background-color: #fb565a;
+	border: none;
+}
+
+.button-letter:hover,
+.button-letter:focus {
+	background-color: #e74246;
+}
+
+.button-letter:active {
+	color: rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 3px #c13135;
+	background-color: #d7373b;
+}
+
+
+
+/*--------------- Футер-Подвал ---------------*/
+.footer-colums {
+	display: flex;
+	width: 1200px;  
+	margin: 62px 0 75px 0;
+	padding: 0;
+}
+
+.footer-social {
+	margin: 0;
+	padding: 0;
+	width: 300px;
+}
+
+.social-type {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0 20px;
+	list-style: none;
+}
+
+.button-social {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+
+	width: 80px;
+	height: 80px;
+	border-radius: 100px;
+	background-color: #e1e1e1;
+}
+
+.button-social:hover,
+.button-social:focus {
+	background-color: #e74246;
+}
+
+.button-social:active {
+	color: rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 3px #c13135;
+	background-color: #d7373b;
+}
+
+.button-social:active img {
+	opacity: 0.3
+}
+
+.footer-discount {
+	width: 900px;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-discount b {
+	display: block;
+	margin: 0 0 0 120px;
+	padding: 6px 0 0 0;
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: bold;
+}
+
+.footer-discount p {
+	margin: 10px 0 0 0;
+	padding: 0 0 0 120px;
+	font-size: 16px;
+	line-height: 22px;
+	color: #444444;
 }

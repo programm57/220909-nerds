@@ -5,7 +5,7 @@
 		<title>Каталог Нёрдс</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.min.css">
 	</head>
 	<body>
 		<header class="main-header">
@@ -113,7 +113,7 @@
 					<ul class="template-list">
 						
 							<li class="sedona-item catalog-item">
-								<p class="sedona-image image">
+								<p class="sedona-image image-template">
 									<img src="img/sedona-template.jpg" width="360" height="576" alt="Шаблон Седона">
 								</p> 
 								<div class="about-sedona about-item">
@@ -126,7 +126,7 @@
 								</div>	
 							</li>
 						<li class="pink-item catalog-item">
-							<p class="pink-image image">
+							<p class="pink-image image-template">
 								<img src="img/pink-template.jpg" width="360" height="576" alt="Шаблон Pink app">
 							</p>
 							<div class="about-pink about-item">
@@ -139,7 +139,7 @@
 							</div>	
 						</li>
 						<li class="barbershop-item catalog-item">
-							<p class="barbershop-image image">
+							<p class="barbershop-image image-template">
 								<img src="img/barbershop-template.jpg" width="360" height="576" alt="Шаблон Барбершопа">
 							</p>
 							<div class="about-barbershop about-item">
@@ -152,7 +152,7 @@
 							</div>	
 						</li>
 						<li class="mishka-item catalog-item">
-							<p class="mishka-image image">
+							<p class="mishka-image image-template">
 								<img src="img/mishka-template.jpg" width="360" height="576" alt="Шаблон интернет-магазина вязаных игрушек">
 							</p>
 							<div class="about-mishka about-item">
@@ -165,7 +165,7 @@
 							</div>
 						</li>
 						<li class="aplus-item catalog-item">
-							<p class="aplus-image image">
+							<p class="aplus-image image-template">
 								<img src="img/aplus-template.jpg" width="360" height="576" alt="Шаблон A plus">
 							</p>
 							<div class="about-plus about-item">
@@ -178,7 +178,7 @@
 							</div>
 						</li>
 						<li class="kvast-item catalog-item">
-							<p class="kvast-image image">
+							<p class="kvast-image image-template">
 								<img src="img/kvast-template.jpg" width="360" height="576" alt="Шаблон Промо-сайта производителя крафтового кваса">
 							</p>
 							<div class="about-kvast about-item">
@@ -202,8 +202,11 @@
 		</main>	
 		<footer class="main-footer">
 			<div class="map">
-				<h2 class="visually-hidden">Карта</h2>
-				<img class="map-picture" src="img/map.jpg" width="1440" height="416" alt="Карта">
+				<h2 class="visually-hidden">Карта</h2>			
+				<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651568!2d30.320894615867413!3d59.938794181876276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1522775596732" width="1440" height="416"  style="border:0" allowfullscreen>
+				</iframe>
+				<img class="map-picture" src="img/map.jpg" width="1440" height="416" alt="Карта">				
 			</div>			
 			<div class="contacts">
 				<h2 class="visually-hidden">Контакты</h2>
@@ -218,15 +221,18 @@
 					<ul class="social-type">
 						<li>
 							<a class="button-social" href="#">
+								<span class="visually-hidden">Вконтакте</span>
 								<img class="button-vk" src="img/vk-icon.svg" alt="Вконтакте" width="26" height="15">
 							</a>
 						</li>
 						<li>
+							<span class="visually-hidden">Фейсбук</span>
 							<a class="button-social" href="#">
 								<img class="button-facebook" src="img/fb-icon.svg" alt="Фейсбук" width="12" height="22">
 							</a>
 						</li>
 						<li>
+							<span class="visually-hidden">Инстаграм</span>							
 							<a class="button-social" href="#">
 								<img class="button-instagram" src="img/insta-icon.svg" alt="Инстаграм" width="21" height="21">
 							</a>
@@ -234,8 +240,8 @@
 					</ul>
 				</div>
 				<div class="footer-discount">
-					<b>Давайте дружить, это выгодно</b>
-					<p>Скидка 10% для друзей из социальных сетей</p>
+					<b>Давайте дружить, это выгодно!</b>
+					<p>Скидка 10% для друзей из социальных сетей.</p>
 				</div>
 			</div>
 		</footer>
