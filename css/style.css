@@ -1,5 +1,6 @@
 html {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 body {
@@ -25,7 +26,8 @@ img {
 }
 
 *::before, *::after {
-	box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+			box-sizing: inherit;
 }
 
 .visually-hidden:not(:focus):not(active)
@@ -93,8 +95,12 @@ input [type="radio"].visually-hidden {
 }
 
 .main-navigation {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0;
@@ -106,9 +112,14 @@ input [type="radio"].visually-hidden {
 }
 
 .site-navigation {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
 	margin: 0;
 	padding: 0 20px;
 }
@@ -144,8 +155,12 @@ input [type="radio"].visually-hidden {
 }
 
 .basket-link {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+		-ms-flex-pack: end;
+			justify-content: flex-end;
 	width: 200px;
 	margin: 0;
 	padding: 0 20px;
@@ -188,12 +203,12 @@ input [type="radio"].visually-hidden {
 
 
 /*--------------- Слайдеры (главная) ---------------*/
-
 .container-slider {
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 .slider {
@@ -203,30 +218,32 @@ input [type="radio"].visually-hidden {
 }
 
 .slider-controls {
-  	position: absolute;
-  	left: 50%;
-  	bottom: 104px;
-  	z-index: 100;
+	position: absolute;
+	left: 50%;
+	bottom: 104px;
+	z-index: 100;
  
-  	width: 160px;
-  	height: 18px;
+	width: 160px;
+	height: 18px;
 
-  	text-align: center;
-  	font-size: 0;
-  	transform: translateX(-50%);
+	text-align: center;
+	font-size: 0;
+	-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
 }
 
-.slider-controls i {
+.slider-controls label {
 	position: relative;
-  	display: inline-block;
-  	width: 18px;
-  	height: 18px;
-  	padding: 8px;
-  	border-radius: 50%;
-  	cursor: pointer;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	padding: 8px;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
-.slider-controls i::after {
+.slider-controls label::after {
 	content: "";
 	position: absolute;
 	top: 8px;
@@ -237,21 +254,6 @@ input [type="radio"].visually-hidden {
 	background: #ffffff;
 	border-radius: 50%;
 }
-
-.slider-controls .active::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	z-index: 2;
-	width: 4px;
-	height: 4px;
-	margin: -4px;
-	background-color: inherit;
-	border: 2px solid #c1c1c1;
-	border-radius: 50%  
-}
-
 
 .slider-list {
 	margin: 0;
@@ -265,13 +267,9 @@ input [type="radio"].visually-hidden {
 }
 
 .slider-item:nth-child(1) {
-	display: block;
-}
-
-.slider-item:nth-child(1) {
-  	background-image: url("../img/slide1.png");
-  	background-repeat: no-repeat;
-  	background-position: 93% 18px;
+	background-image: url("../img/slide1.png");
+	background-repeat: no-repeat;
+	background-position: 93% 18px;
 }
 
 .slider-item:nth-child(2) {
@@ -284,6 +282,34 @@ input [type="radio"].visually-hidden {
   background-image: url("../img/slide3.png");
   background-repeat: no-repeat;
   background-position: 100% 20px;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+	display: block;
+}
+
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+	display: block;
+}
+
+#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+	display: block;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 2;
+	width: 4px;
+	height: 4px;
+	margin: -4px;
+	background-color: inherit;
+	border: 2px solid #c1c1c1;
+	border-radius: 50%;
 }
 
 .slider-item h3 {
@@ -301,33 +327,30 @@ input [type="radio"].visually-hidden {
 }
 
 .button-slider {
-  	display: block;
-  	width: 240px;
-  	padding: 16px 0;
-  
-  	font-size: 16px;
-  	line-height: 18px;
-  	color: #ffffff;
-  	text-transform: uppercase;
-  	text-align: center;
-  	text-decoration: none;
-  
-  	background-color: #fb565a;
-  	border-radius: 3px;
-  	
-  	border: none;
+	display: block;
+	width: 240px;
+	padding: 16px 0;
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;  
+	background-color: #fb565a;
+	border-radius: 3px;
+	border: none;
 }
 
 .button-slider:hover,
 .button-slider:focus {
-  background-color: #e74246;
+	background-color: #e74246;
 }
 
 .button-slider:active {
-  color: rgba(255, 255, 255, 0.3);
-  
-  background-color: #d7373b;
-  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #d7373b;
+	-webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+			box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 
@@ -335,6 +358,8 @@ input [type="radio"].visually-hidden {
 /*--------------- Услуги (главная) ---------------*/
 .services-list {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 1200px;
 	margin: 0 auto;
@@ -399,7 +424,8 @@ input [type="radio"].visually-hidden {
 
 .web-site a:active {
 	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0 3px #c13135;
+	-webkit-box-shadow: inset 0 3px #c13135;
+			box-shadow: inset 0 3px #c13135;
 	background-color: #d7373b;
 }
 
@@ -411,7 +437,8 @@ input [type="radio"].visually-hidden {
 .aps a:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #00aa62;
-	box-shadow: inset 0 3px #009958;
+	-webkit-box-shadow: inset 0 3px #009958;
+			box-shadow: inset 0 3px #009958;
 }
 
 .presentation a:hover,
@@ -422,7 +449,8 @@ input [type="radio"].visually-hidden {
 .presentation a:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #e5a722;
-	box-shadow: inset 0 3px #ce961f;
+	-webkit-box-shadow: inset 0 3px #ce961f;
+			box-shadow: inset 0 3px #ce961f;
 }
 
 .services-list::after {
@@ -439,8 +467,12 @@ input [type="radio"].visually-hidden {
 
 /*--------------- О студии (главная) ---------------*/
 .about-colums {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0;
@@ -532,6 +564,8 @@ input [type="radio"].visually-hidden {
 }
 
 .block2004 .statistics {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin: 58px 0 0 0;
 	padding: 0;
@@ -587,8 +621,12 @@ input [type="radio"].visually-hidden {
 
 .partners-list {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
 	width: 1200px;
 	margin: -21px 0 0 0;
 	padding: 0;
@@ -628,7 +666,8 @@ input [type="radio"].visually-hidden {
 	width: 2px;
 	height: 52px;
 	background-color: #d1d1d1;
-	filter: opacity(1);
+	-webkit-filter: opacity(1);
+			filter: opacity(1);
 }
 
 .partners-item:nth-child(1)::before {
@@ -733,7 +772,8 @@ input [type="radio"].visually-hidden {
 	padding: 0;
 	border: 8px solid #ffffff;
 	background-color: #ababab;
-	box-shadow: 0 2px 1px 0 #cfcfcf; 	
+	-webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
+			box-shadow: 0 2px 1px 0 #cfcfcf; 	
 	border-radius: 100%;
 	cursor: pointer;
 }
@@ -798,7 +838,7 @@ input [type="radio"].visually-hidden {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	color: #dfdfdf;
+	color: #283136;
 }
 
 .option-grid {
@@ -810,7 +850,11 @@ input [type="radio"].visually-hidden {
 	position: relative;
 	display: block;
 	cursor: pointer;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	color: #283136;
 }
 
 .filter-input-radio + label::before {
@@ -822,12 +866,10 @@ input [type="radio"].visually-hidden {
 	height: 27px;
 	background-image: url("../img/radio-off.svg");
 	background-repeat: no-repeat;
-	background-position: 0 0;
-	color: #dfdfdf;
 	opacity: 0.4;
 }
 
-.filter-input-radio:checked + label::after {
+.filter-input-radio:checked + label::before {
 	content: "";
 	position: absolute;
 	left: -35px;
@@ -836,9 +878,6 @@ input [type="radio"].visually-hidden {
 	height: 27px;
 	background-image: url("../img/radio-on.svg");
 	background-repeat: no-repeat;
-	background-position: 0 0;
-	color: #dfdfdf;
-	opacity: 0.4;
 }
 
 
@@ -886,7 +925,10 @@ input [type="radio"].visually-hidden {
 	position: relative;
 	display: block;
 	cursor: pointer;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
 }
 
 .filter-input-checkbox + label::before {
@@ -898,11 +940,10 @@ input [type="radio"].visually-hidden {
 	height: 27px;
 	background-image: url("../img/checkbox-off.svg");
 	background-repeat: no-repeat;
-	background-position: 0 0;
 	opacity: 0.4;
 }
 
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked + label::before {
 	content: "";
 	position: absolute;
 	left: -35px;
@@ -911,8 +952,6 @@ input [type="radio"].visually-hidden {
 	height: 27px;
 	background-image: url("../img/checkbox-on.svg");
 	background-repeat: no-repeat;
-	background-position: 0 0;
-	opacity: 0.4;
 }
 
 
@@ -939,10 +978,14 @@ input [type="radio"].visually-hidden {
 
 
 /*--------------- Эффекты-псевдоэлементов (каталог) ---------------*/
-.filter-input:hover + label, 
+.filter-input:hover + label::before, 
+.filter-input:focus + label::before {
+	opacity: 1;	
+}
+
+.filter-input:hover + label,
 .filter-input:focus + label {
 	color: #000000;
-	opacity: 1;	
 }
 
 .filter-button:hover,
@@ -951,7 +994,8 @@ input [type="radio"].visually-hidden {
 }
 
 .filter-button:active {
-	box-shadow: 0 3px inset;
+	-webkit-box-shadow: 0 3px inset;
+			box-shadow: 0 3px inset;
 	color: rgba(0, 0, 0, 0.3);
 	background-color: #d5d5d5;
 }
@@ -986,8 +1030,12 @@ input [type="radio"].visually-hidden {
 }
 
 .sort-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-start;
+	-webkit-box-pack: start;
+		-ms-flex-pack: start;
+			justify-content: flex-start;
 	width: 300px;
 	margin: 2px 0 0 0;
 	padding: 0 0 0 5px; 
@@ -998,15 +1046,23 @@ input [type="radio"].visually-hidden {
 }
 
 .sort-columns {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
 	margin: 0 0 -4px 0;
 	padding: 0;
 }
 
 .sort-kind {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
 	margin: 0;
 	padding: 0;
 }
@@ -1071,6 +1127,8 @@ input [type="radio"].visually-hidden {
 
 /*---------------Стили шаблонов (каталог) ---------------*/
 .catalog-columns {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 1200px;
 	margin: 0 auto;
@@ -1084,9 +1142,14 @@ input [type="radio"].visually-hidden {
 }
 
 .template-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
 	margin: 0;
 	margin-bottom: 27px;
 	padding: 0;
@@ -1137,7 +1200,8 @@ input [type="radio"].visually-hidden {
 }
 
 .button-orders button:active {
-	box-shadow: inset 0 3px #c13135;
+	-webkit-box-shadow: inset 0 3px #c13135;
+			box-shadow: inset 0 3px #c13135;
 	background-color: #d7373b;
 }
 
@@ -1156,7 +1220,8 @@ input [type="radio"].visually-hidden {
 }
 
 .catalog-item:hover {
-	box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
+	-webkit-box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
+			box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
 } 
 
 .catalog-item h4 {
@@ -1227,6 +1292,8 @@ input [type="radio"].visually-hidden {
 
 /*---------------Ссылки на страницы (каталог) ---------------*/
 .pagination-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	font-size: 16px;
 	line-height: 18px;
@@ -1286,7 +1353,8 @@ input [type="radio"].visually-hidden {
 .pagination a:active {
 	color: rgba(0, 0, 0, 0.3);
 	background-color: #d5d5d5;
-	box-shadow: 0 3px inset;
+	-webkit-box-shadow: 0 3px inset;
+			box-shadow: 0 3px inset;
 }
 
 
@@ -1294,7 +1362,7 @@ input [type="radio"].visually-hidden {
 /*--------------- Обратная связь (модалка) ---------------*/
 .feedback {
 	display: none;
-	margin: -310px 0 0 -480px;
+	margin: -300px 0 0 -480px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -1303,7 +1371,8 @@ input [type="radio"].visually-hidden {
 	min-height: 590px;
 	color: #000000;
 	background-color: #ffffff;
-	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.7);
+			box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.7);
 }
 
 .feedback-close {
@@ -1334,8 +1403,12 @@ input [type="radio"].visually-hidden {
 .feedback-colums {
 	margin: 0;
 	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
 }
 
 .feedback  p {
@@ -1353,7 +1426,8 @@ input [type="radio"].visually-hidden {
 }
 
 .letter input {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
 	margin: 0 0 36px 0;
 	padding: 0 0 0 15px;
 	width: 360px;
@@ -1361,10 +1435,12 @@ input [type="radio"].visually-hidden {
 }
 
 .letter textarea {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
 	min-height: 118px;
 	margin: 0;
 	padding: 15px 0 0 12px;
-	width: 745px;
+	width: 760px;
 	height: 104px;
 }
 
@@ -1394,6 +1470,18 @@ input [type="radio"].visually-hidden {
 	border: none;
 }
 
+.button-feedback-sent:hover,
+.button-feedback-sent:focus {
+	background-color: #e74246;
+}
+
+.button-feedback-sent:active {
+	color: rgba(255, 255, 255, 0.3);
+	-webkit-box-shadow: inset 0 3px #c13135;
+			box-shadow: inset 0 3px #c13135;
+	background-color: #d7373b;
+}
+
 .letter input:hover,
 .letter textarea:hover {
 	color: #b4b9bb;
@@ -1402,9 +1490,15 @@ input [type="radio"].visually-hidden {
 
 .letter input:focus,
 .letter textarea:focus {
-	color: 
 	border-color: #000000;
 }
+
+.letter input:invalid,
+.letter text:invalid {
+	color: #e74246;
+	border-color: #e74246;
+}
+
 
 
 
@@ -1481,14 +1575,26 @@ input [type="radio"].visually-hidden {
 
 .button-letter:active {
 	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0 3px #c13135;
+	-webkit-box-shadow: inset 0 3px #c13135;
+			box-shadow: inset 0 3px #c13135;
 	background-color: #d7373b;
 }
 
 
+.feedback input:hover {
+	border-color: #b4b9bb;
+	olor: #b4b9bb;
+}
+
+.feedback input:focus {
+	border-color: #000000;
+	color: #000000;
+}
 
 /*--------------- Футер-Подвал ---------------*/
 .footer-colums {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 1200px;  
 	margin: 62px 0 75px 0;
@@ -1502,17 +1608,26 @@ input [type="radio"].visually-hidden {
 }
 
 .social-type {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
 	margin: 0;
 	padding: 0 20px;
 	list-style: none;
 }
 
 .button-social {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-self: center;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-ms-flex-item-align: center;
+		align-self: center;
 
 	width: 80px;
 	height: 80px;
@@ -1527,7 +1642,8 @@ input [type="radio"].visually-hidden {
 
 .button-social:active {
 	color: rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0 3px #c13135;
+	-webkit-box-shadow: inset 0 3px #c13135;
+			box-shadow: inset 0 3px #c13135;
 	background-color: #d7373b;
 }
 
