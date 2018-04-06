@@ -4,6 +4,8 @@ html {
 }
 
 body {
+	min-width: 1200px;
+
 	margin: 0;
 	padding: 0;
 
@@ -13,7 +15,6 @@ body {
 	font-weight: normal;
 	color: #000000;
 	background-color: #ffffff;
-	overflow-x: hidden;
 } 
 
 a {
@@ -76,6 +77,7 @@ input [type="radio"].visually-hidden {
 .container {
 	margin: 0 auto;
 	padding: 0;
+	overflow: hidden; 	
 }
 
 .main-header {
@@ -1278,14 +1280,6 @@ input [type="radio"].visually-hidden {
 	bottom: 0;
 }
 
-.about-plus {
-	bottom: 3px;
-}
-
-.about-kvast {
-	bottom: 4px;
-}
-
 .catalog-item .about-item {
 	display: none;
 }
@@ -1393,6 +1387,15 @@ input [type="radio"].visually-hidden {
 	border: 0;
 	opacity: 0.3;
 	cursor: pointer;
+}
+
+.feedback-close:hover,
+.feedback-close:focus {
+	opacity: 1;
+}
+
+.feedback-close:active {
+	opacity: 0.1
 }
 
 .letter {
@@ -1505,6 +1508,55 @@ input [type="radio"].visually-hidden {
 	border-color: #e74246;
 }
 
+.modal-show {
+	display: block;
+	-webkit-animation: bounce 1.6s;
+	        animation: bounce 1.6s;
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-transform: translateX(-2000px);
+		        transform: translateX(-2000px);
+	}
+
+	70% {
+		-webkit-transform: translateX(30px);
+		        transform: translateX(30px);
+	}
+
+	90% {
+		-webkit-transform: translateY(-10px);
+		        transform: translateY(-10px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+}
+
+@keyframes bounce {
+	0% {
+		-webkit-transform: translateX(-2000px);
+		        transform: translateX(-2000px);
+	}
+
+	70% {
+		-webkit-transform: translateX(30px);
+		        transform: translateX(30px);
+	}
+
+	90% {
+		-webkit-transform: translateY(-10px);
+		        transform: translateY(-10px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+}
 
 
 
@@ -1513,6 +1565,8 @@ input [type="radio"].visually-hidden {
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0;
+	overflow: hidden;
+	position: relative; 
 }
 
 .map { 
@@ -1531,7 +1585,8 @@ input [type="radio"].visually-hidden {
 	position: absolute;
 	width: 219px;
 	height: 308px;
-	margin-left: 21px;
+	left: 50%;
+	margin-left: -580px;
 	margin-top: -370px;
 	padding: 0 50px;
 	background-color: #ffffff;
@@ -1590,7 +1645,7 @@ input [type="radio"].visually-hidden {
 
 .feedback input:hover {
 	border-color: #b4b9bb;
-	olor: #b4b9bb;
+	color: #b4b9bb;
 }
 
 .feedback input:focus {
@@ -1604,7 +1659,7 @@ input [type="radio"].visually-hidden {
 	display: -ms-flexbox;
 	display: flex;
 	width: 1200px;  
-	margin: 62px 0 75px 0;
+	margin: 62px auto 75px;
 	padding: 0;
 }
 

@@ -104,8 +104,8 @@
 									<li class="sort-name"><a href="#">По названию</a></li> 
 								</ul>
 								<ul class="sort-kind">
-									<li class="sort-down"><a href="#"></a></li>
-									<li class="sort-up-current"><a></a></li>
+									<li class="sort-down"><a href="#"><span class="visually-hidden">По убыванию</span></a></li>
+									<li class="sort-up-current"><a><span class="visually-hidden">По возрастанию</span></a></li>
 								</ul>
 						</div>
 					</div>					
@@ -214,7 +214,7 @@
 				<p>191186, Санкт-Петербург,<br>
 				ул. Б. Конюшенная, д. 19/8</p>
 				<p>тел. +7 (812) 275-75-75</p>
-				<a class="button-letter" href="#">Напишите нам</a>
+				<a class="button-letter" href="writetous.html">Напишите нам</a>
 			</div>
 			<div class="footer-colums">
 				<div class="footer-social">
@@ -250,11 +250,11 @@
 				<h3>Напишите нам</h3>
 				<div class="feedback-colums">
 					<p>
-						<label class="label-name" for="user-name">Ваше имя:</label><br>
-						<input class="field-name" id="user-name" name="name" type="text" placeholder="Имя Фамилия">
+						<label class="label-name" for="user-name">Ваше имя:</label>
+						<input class="field-name" id="user-name" name="usernamefield" type="text" placeholder="Имя Фамилия">
 					</p>
 					<p>
-						<label for="user-email">Ваш e-mail:</label><br>
+						<label for="user-email">Ваш e-mail:</label>
 						<input class="field-email" id="user-email" name="email" type="email" placeholder="email@example.com">
 					</p>
 				</div>
@@ -266,5 +266,6 @@
 			</form>			
 			<button class="feedback-close" type="button">Закрыть</button>
 		</section>
+		<script src="js/popap.min.js"></script>
 	</body>
 </html>
