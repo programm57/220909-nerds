@@ -1562,7 +1562,6 @@ input [type="radio"].visually-hidden {
 
 /*--------------- Футер ---------------*/
 .main-footer {
-	width: 1200px;
 	margin: 0 auto;
 	padding: 0;
 	overflow: hidden;
